@@ -103,7 +103,7 @@
             </p>
             
             <div class="flex justify-center" data-aos="zoom-in" data-aos-delay="400">
-                <a href="#contacto" class="bg-white text-dark-bg px-14 py-5 rounded-xl font-black text-base md:text-lg btn-premium uppercase tracking-[0.2em] shadow-xl">
+                <a href="#contacto" class="bg-white text-[#020617] px-14 py-5 rounded-xl font-black text-base md:text-lg btn-premium uppercase tracking-[0.2em] shadow-xl">
                     VALORACIÓN GRATIS
                 </a>
             </div>
@@ -156,7 +156,7 @@
                         <div class="text-neon-cyan text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">⚡</div>
                         <h3 class="text-xl font-bold mb-4 uppercase tracking-wide text-white">Certificado de Eficiencia Energética (CEE)</h3>
                         <p class="text-white/70 text-sm leading-relaxed font-light">
-                            Gestionamos la obtención de tu certificado energético oficial, documento obligatorio por ley para formalizar cualquier operation de compraventa.
+                            Gestionamos la obtención de tu certificado energético oficial, documento obligatorio por ley para formalizar cualquier operación de compraventa.
                         </p>
                     </div>
                 </div>
@@ -185,15 +185,18 @@
                 <h2 class="text-3xl md:text-5xl font-black mb-3 uppercase tracking-tighter">¿Hablamos hoy?</h2>
                 <p class="text-white/40 text-xs md:text-sm uppercase tracking-widest mb-12">Asesoramiento Exclusivo a un Clic</p>
                 
-                <form class="grid grid-cols-1 gap-6 text-left">
+                <form action="https://api.web3forms.com/submit" method="POST" class="grid grid-cols-1 gap-6 text-left">
+                    
+                    <input type="hidden" name="access_key" value="6ee05328-7787-401b-9229-ea62fe657fd4">
+
                     <div class="flex flex-col gap-2">
                         <label class="text-[10px] uppercase tracking-wider font-bold text-sky-400 ml-1">Nombre</label>
-                        <input type="text" placeholder="Introduce tu nombre" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-neon-cyan focus:bg-white/10 outline-none text-sm text-white transition-all">
+                        <input type="text" name="Nombre" required placeholder="Introduce tu nombre" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-neon-cyan focus:bg-white/10 outline-none text-sm text-white transition-all">
                     </div>
                     
                     <div class="flex flex-col gap-2">
                         <label class="text-[10px] uppercase tracking-wider font-bold text-sky-400 ml-1">Teléfono</label>
-                        <input type="tel" placeholder="Introduce tu número de teléfono" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-neon-cyan focus:bg-white/10 outline-none text-sm text-white transition-all">
+                        <input type="tel" name="Teléfono" required placeholder="Introduce tu número de teléfono" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-neon-cyan focus:bg-white/10 outline-none text-sm text-white transition-all">
                     </div>
                     
                     <button type="submit" class="mt-4 bg-gradient-to-r from-sky-400 to-cyan-400 text-dark-bg py-4 rounded-xl font-black tracking-[0.25em] uppercase text-sm btn-premium shadow-lg w-full text-center">
