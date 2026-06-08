@@ -99,7 +99,7 @@
             </h1>
             
             <p class="text-lg md:text-2xl font-light text-white/80 max-w-3xl mx-auto mb-12 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
-                Vender tu casa, <span class="text-white font-semibold underline decoration-neon-cyan underline-offset-8">sin límites</span> and sin complicaciones.
+                Vender tu casa, <span class="text-white font-semibold underline decoration-neon-cyan underline-offset-8">sin límites</span> y sin complicaciones.
             </p>
             
             <div class="flex justify-center" data-aos="zoom-in" data-aos-delay="400">
@@ -210,7 +210,7 @@
         <div class="max-w-7xl mx-auto px-6">
             
             <div class="text-center mb-20">
-                <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter">Servicios Avanzados Incluidos</h2>
+                <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter">Servicios Avanzados</h2>
                 <div class="w-16 h-1 bg-neon-cyan mx-auto mt-4 rounded-full"></div>
             </div>
 
@@ -219,7 +219,7 @@
                 <div class="glass-card p-10 rounded-[2rem] hover:border-sky-400/30 transition-all duration-300 group flex flex-col justify-between" data-aos="fade-up">
                     <div>
                         <div class="text-sky-400 text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">🔑</div>
-                        <h3 class="text-xl font-bold mb-4 uppercase tracking-wide text-white">Nota Simple Informat</h3>
+                        <h3 class="text-xl font-bold mb-4 uppercase tracking-wide text-white">Nota Simple Informativa</h3>
                         <p class="text-white/70 text-sm leading-relaxed font-light">
                             Solicitamos y verificamos la información registral de tu inmueble para garantizar la ausencia de cargas y confirmar la titularidad actual.
                         </p>
@@ -254,32 +254,42 @@
     <section id="contacto" class="py-28 bg-slate-950/60 border-t border-white/5 relative overflow-hidden">
         <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-sky-500/5 blur-[120px] rounded-full"></div>
         
-        <div class="max-w-3xl mx-auto px-6 relative z-10">
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
             <div class="glass-card p-10 md:p-16 rounded-[2.5rem] shadow-2xl text-center">
                 
                 <h2 class="text-3xl md:text-5xl font-black mb-3 uppercase tracking-tighter">¿Hablamos hoy?</h2>
                 <p class="text-white/40 text-xs md:text-sm uppercase tracking-widest mb-12">Asesoramiento Exclusivo a un Clic</p>
                 
-                <form action="https://api.web3forms.com/submit" method="POST" class="grid grid-cols-1 gap-6 text-left">
+                <form action="https://api.web3forms.com/submit" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
                     
                     <input type="hidden" name="access_key" value="6ee05328-7787-401b-9229-ea62fe657fd4">
 
                     <div class="flex flex-col gap-2">
-                        <label class="text-[10px] uppercase tracking-wider font-bold text-sky-400 ml-1">Nombre</label>
-                        <input type="text" name="Nombre" required placeholder="Introduce tu nombre" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-neon-cyan focus:bg-white/10 outline-none text-sm text-white transition-all">
+                        <label class="text-[10px] uppercase tracking-wider font-bold text-sky-400 ml-1">Tu nombre completo</label>
+                        <input type="text" name="Nombre_Completo" required placeholder="Introduce nombre y apellidos" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-neon-cyan focus:bg-white/10 outline-none text-sm text-white transition-all">
                     </div>
                     
                     <div class="flex flex-col gap-2">
                         <label class="text-[10px] uppercase tracking-wider font-bold text-sky-400 ml-1">Teléfono</label>
-                        <input type="tel" name="Teléfono" required placeholder="Introduce tu número de teléfono" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-neon-cyan focus:bg-white/10 outline-none text-sm text-white transition-all">
+                        <input type="tel" name="Teléfono" required placeholder="Introduce tu número" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-neon-cyan focus:bg-white/10 outline-none text-sm text-white transition-all">
                     </div>
 
                     <div class="flex flex-col gap-2">
-                        <label class="text-[10px] uppercase tracking-wider font-bold text-sky-400 ml-1">¿Qué necesitas? (Opcional)</label>
-                        <textarea name="Mensaje" rows="4" placeholder="Cuéntanos un poco sobre tu inmueble o consulta..." class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-neon-cyan focus:bg-white/10 outline-none text-sm text-white transition-all resize-none"></textarea>
+                        <label class="text-[10px] uppercase tracking-wider font-bold text-sky-400 ml-1">¿Dónde se encuentra el inmueble? (Barrio o zona)</label>
+                        <input type="text" name="Ubicación_Inmueble" required placeholder="Ej: Ruzafa, Chamberí, Centro..." class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-neon-cyan focus:bg-white/10 outline-none text-sm text-white transition-all">
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <label class="text-[10px] uppercase tracking-wider font-bold text-sky-400 ml-1">Tipo de inmueble</label>
+                        <input type="text" name="Tipo_Inmueble" required placeholder="Ej: Piso, Casa, Ático, Estudio..." class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-neon-cyan focus:bg-white/10 outline-none text-sm text-white transition-all">
+                    </div>
+
+                    <div class="flex flex-col gap-2 md:col-span-2">
+                        <label class="text-[10px] uppercase tracking-wider font-bold text-sky-400 ml-1">Cuéntame: ¿Tienes prisa por vender o solo quieres conocer el valor actual?</label>
+                        <textarea name="Urgencia_Y_Necesidad" rows="4" placeholder="Cuéntame brevemente tu situación o qué plazo tienes en mente..." class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-neon-cyan focus:bg-white/10 outline-none text-sm text-white transition-all resize-none"></textarea>
                     </div>
                     
-                    <button type="submit" class="mt-4 bg-gradient-to-r from-sky-400 to-cyan-400 text-dark-bg py-4 rounded-xl font-black tracking-[0.25em] uppercase text-sm btn-premium shadow-lg w-full text-center">
+                    <button type="submit" class="md:col-span-2 mt-4 bg-gradient-to-r from-sky-400 to-cyan-400 text-dark-bg py-4 rounded-xl font-black tracking-[0.25em] uppercase text-sm btn-premium shadow-lg w-full text-center">
                         ENVIAR SOLICITUD
                     </button>
                 </form>
