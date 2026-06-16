@@ -5,55 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Cookies | Rara Avis Homes</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=200;400;700&display=swap" rel="stylesheet">
     <style>
-        body { 
-            font-family: 'Montserrat', sans-serif; 
-            background-color: #020617;
-            color: white;
-        }
-        .nav-exact-gradient {
-            background: linear-gradient(to bottom, #29b1ec 0%, #51c6f3 100%);
-        }
+        body { font-family: 'Montserrat', sans-serif; background-color: #020617; color: white; }
+        .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.07); }
     </style>
 </head>
-<body class="min-h-screen bg-[#020617] flex flex-col justify-between">
+<body class="min-h-screen flex items-center justify-center py-12 px-4">
+    <div class="max-w-3xl w-full glass-card p-8 md:p-12 rounded-[2rem] shadow-2xl">
+        <h1 class="text-2xl md:text-3xl font-black uppercase tracking-wider mb-2 text-transparent bg-clip-text bg-gradient-to-r from-white to-sky-300">Política de Cookies</h1>
+        <p class="text-xs uppercase tracking-widest text-[#00ffff] mb-8">Uso de Cookies en la Web</p>
+        
+        <div class="space-y-6 text-sm text-slate-200 font-light leading-relaxed">
+            <p>Rara Avis Homes informa sobre la utilización de cookies en su página web para mejorar la experiencia de navegación del usuario y ofrecer un servicio premium.</p>
+            
+            <h2 class="text-base font-bold text-white uppercase tracking-wide mt-6">¿Qué son las Cookies?</h2>
+            <p>Las cookies son pequeños archivos de texto que los sitios web almacenan en su ordenador, smartphone o tablet al visitarlos. Sirven para recordar sus preferencias de navegación y optimizar el rendimiento técnico de la página web.</p>
 
-    <nav class="w-full nav-exact-gradient h-20 flex items-center justify-between px-6 md:px-12 shadow-xl">
-        <a href="index.html" class="flex flex-col text-center">
-            <span class="text-white text-lg font-light tracking-[0.2em] uppercase leading-none">Rara Avis</span>
-            <span class="text-white/70 text-[9px] font-normal tracking-[0.35em] lowercase mt-1">homes</span>
-        </a>
-        <a href="index.html" class="text-white text-xs uppercase tracking-widest border border-white/30 px-4 py-2 rounded-lg hover:bg-white hover:text-[#020617] transition-all font-bold">
-            Volver
-        </a>
-    </nav>
+            <h2 class="text-base font-bold text-white uppercase tracking-wide mt-6">Cookies Utilizadas en esta Web</h2>
+            <p>Este sitio web utiliza únicamente cookies técnicas de carácter esencial (necesarias para que la web cargue correctamente y los formularios funcionen) y cookies sutiles de personalización estética.</p>
 
-    <main class="max-w-4xl mx-auto px-6 py-16 flex-grow">
-        <h1 class="text-3xl md:text-4xl font-black uppercase tracking-tight text-white mb-2">Política de Cookies</h1>
-        <p class="text-xs uppercase tracking-widest text-[#00ffff] font-bold mb-10">Uso Transparente del Sitio</p>
-
-        <div class="space-y-8 text-sm md:text-base font-light text-slate-200 leading-relaxed">
-            <section>
-                <h2 class="text-lg font-bold uppercase text-white tracking-wide mb-3">1. ¿Qué son las Cookies?</h2>
-                <p>Una cookie es un pequeño fichero de texto que se descarga en tu navegador al acceder a determinadas páginas web. Permiten almacenar y recuperar información sobre los hábitos de navegación del usuario para mejorar la velocidad y estabilidad del sitio.</p>
-            </section>
-
-            <section>
-                <h2 class="text-lg font-bold uppercase text-white tracking-wide mb-3">2. Cookies Utilizadas</h2>
-                <p>Este sitio web utiliza únicamente cookies técnicas estrictamente esenciales y de rendimiento (como los scripts de animaciones AOS y Tailwind) para garantizar que la web cargue de forma ultra rápida, fluida y sin interrupciones en tu dispositivo. **No recopilamos datos comerciales ni de rastreo publicitario de terceros.**</p>
-            </section>
-
-            <section>
-                <h2 class="text-lg font-bold uppercase text-white tracking-wide mb-3">3. Desactivación de Cookies</h2>
-                <p>Puedes restringir, bloquear o borrar las cookies de este o cualquier otro sitio web utilizando la configuración interna de tu navegador de Internet (Safari, Google Chrome, Mozilla Firefox, etc.).</p>
-            </section>
+            <h2 class="text-base font-bold text-white uppercase tracking-wide mt-6">Cómo Desactivar las Cookies</h2>
+            <p>El usuario puede restringir, bloquear o borrar las cookies de este o cualquier otro sitio web configurando las opciones de su navegador de Internet (Google Chrome, Safari, Mozilla Firefox, Microsoft Edge, etc.).</p>
         </div>
-    </main>
-
-    <footer class="py-8 border-t border-white/5 text-center text-[10px] uppercase tracking-[0.25em] text-slate-500 bg-slate-950/20">
-        &copy; Rara Avis Homes. Todos los derechos reservados.
-    </footer>
-
+        
+        <div class="mt-12 text-center">
+            <a href="index.html" class="inline-block border border-white/20 hover:border-[#00ffff] hover:text-[#00ffff] text-xs uppercase tracking-widest px-6 py-3 rounded-xl transition-all">Volver al inicio</a>
+        </div>
+    </div>
 </body>
 </html>
