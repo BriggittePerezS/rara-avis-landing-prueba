@@ -5,36 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Política de Privacidad | Rara Avis Homes</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=200;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=200;300;400;500;600;700;900&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Montserrat', sans-serif; background-color: #020617; color: white; }
-        .glass-card { background: rgba(255, 255, 255, 0.02); backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.07); }
+        body { 
+            font-family: 'Montserrat', sans-serif; 
+            background-color: #020617;
+            color: white;
+        }
+        .nav-exact-gradient {
+            background: linear-gradient(to bottom, #29b1ec 0%, #51c6f3 100%);
+        }
     </style>
 </head>
-<body class="min-h-screen flex items-center justify-center py-12 px-4">
-    <div class="max-w-3xl w-full glass-card p-8 md:p-12 rounded-[2rem] shadow-2xl">
-        <h1 class="text-2xl md:text-3xl font-black uppercase tracking-wider mb-2 text-transparent bg-clip-text bg-gradient-to-r from-white to-sky-300">Política de Privacidad</h1>
-        <p class="text-xs uppercase tracking-widest text-[#00ffff] mb-8">Protección de Datos Personales</p>
-        
-        <div class="space-y-6 text-sm text-slate-400 font-light leading-relaxed">
-            <p>De conformidad con el Reglamento (UE) 2016/679 de Protección de Datos (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD), se detalla la gestión de los datos recabados en este portal web:</p>
-            
-            <h2 class="text-base font-bold text-white uppercase tracking-wide mt-6">Responsable del Tratamiento</h2>
-            <p>Ana María Yende Salazar, con NIE Y8931274C, dirección en Calle José María Roquero 7, y correo electrónico de contacto info@raraavishomes.com.</p>
+<body class="min-h-screen bg-[#020617] flex flex-col justify-between">
 
-            <h2 class="text-base font-bold text-white uppercase tracking-wide mt-6">Finalidad del Tratamiento</h2>
-            <p>Los datos facilitados a través de nuestro formulario de contacto se utilizarán exclusivamente para resolver sus dudas, enviarle la valoración gratuita solicitada de su inmueble y ponernos en contacto con usted con fines comerciales relacionados con su propiedad.</p>
+    <nav class="w-full nav-exact-gradient h-20 flex items-center justify-between px-6 md:px-12 shadow-xl">
+        <a href="index.html" class="flex flex-col text-center">
+            <span class="text-white text-lg font-light tracking-[0.2em] uppercase leading-none">Rara Avis</span>
+            <span class="text-white/70 text-[9px] font-normal tracking-[0.35em] lowercase mt-1">homes</span>
+        </a>
+        <a href="index.html" class="text-white text-xs uppercase tracking-widest border border-white/30 px-4 py-2 rounded-lg hover:bg-white hover:text-[#020617] transition-all font-bold">
+            Volver
+        </a>
+    </nav>
 
-            <h2 class="text-base font-bold text-white uppercase tracking-wide mt-6">Legitimación</h2>
-            <p>La base legal para el tratamiento de sus datos es el consentimiento expreso e inequívoco que el usuario otorga al marcar la casilla de aceptación antes de enviar el formulario.</p>
+    <main class="max-w-4xl mx-auto px-6 py-16 flex-grow">
+        <h1 class="text-3xl md:text-4xl font-black uppercase tracking-tight text-white mb-2">Política de Privacidad</h1>
+        <p class="text-xs uppercase tracking-widest text-[#00ffff] font-bold mb-10">Adaptación Estricta al RGPD</p>
 
-            <h2 class="text-base font-bold text-white uppercase tracking-wide mt-6">Sus Derechos</h2>
-            <p>Tiene derecho a acceder, rectificar, limitar o suprimir sus datos en cualquier momento. Para ejercer estos derechos, puede enviar un correo electrónico a info@raraavishomes.com adjuntando una copia de su documento de identidad.</p>
+        <div class="space-y-8 text-sm md:text-base font-light text-slate-200 leading-relaxed">
+            <section>
+                <h2 class="text-lg font-bold uppercase text-white tracking-wide mb-3">1. Principio de Transparencia</h2>
+                <p>A través de este documento, informamos de forma clara cómo recopilamos y tratamos tus datos personales al rellenar nuestro formulario de contacto, cumpliendo de forma rigurosa con el Reglamento General de Protección de Datos (RGPD).</p>
+            </section>
+
+            <section>
+                <h2 class="text-lg font-bold uppercase text-white tracking-wide mb-3">2. Finalidad del Tratamiento</h2>
+                <p>Los datos solicitados (Nombre, Teléfono, Ubicación y Tipo de Inmueble) se recogen exclusivamente con la finalidad de gestionar tu solicitud de valoración inmobiliaria gratuita, agendar una consulta personalizada y enviarte la información requerida de manera directa.</p>
+            </section>
+
+            <section>
+                <h2 class="text-lg font-bold uppercase text-white tracking-wide mb-3">3. Conservación y Derechos de los Usuarios</h2>
+                <p>Tus datos se conservarán únicamente durante el tiempo estrictamente necesario para cumplir con el fin para el que fueron recabados. En cualquier momento puedes ejercer tus derechos de **Acceso, Rectificación, Supresión y Oposición (ARCO)** enviando una solicitud formal a través de nuestras vías de contacto directo.</p>
+            </section>
         </div>
-        
-        <div class="mt-12 text-center">
-            <a href="index.html" class="inline-block border border-white/20 hover:border-[#00ffff] hover:text-[#00ffff] text-xs uppercase tracking-widest px-6 py-3 rounded-xl transition-all">Volver al inicio</a>
-        </div>
-    </div>
+    </main>
+
+    <footer class="py-8 border-t border-white/5 text-center text-[10px] uppercase tracking-[0.25em] text-slate-500 bg-slate-950/20">
+        &copy; Rara Avis Homes. Todos los derechos reservados.
+    </footer>
+
 </body>
 </html>
