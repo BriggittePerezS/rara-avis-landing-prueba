@@ -100,6 +100,7 @@
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
+        /* Contenedor del video con zoom para ocultar íconos nativos */
         .video-background {
             position: absolute;
             top: 50%;
@@ -112,14 +113,15 @@
         }
 
         .video-background iframe {
-            width: 100vw;
-            height: 56.25vw;
-            min-height: 100vh;
-            min-width: 177.77vh;
+            width: 130vw;
+            height: 73.125vw;
+            min-height: 130vh;
+            min-width: 231.1vh;
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%) scale(1.2);
+            pointer-events: none;
         }
     </style>
 </head>
@@ -166,13 +168,14 @@
     <section class="relative h-screen flex items-end pb-16 pt-28 px-6 md:px-16 overflow-hidden">
         <div class="video-background z-0 pointer-events-none">
             <iframe 
-                src="https://www.youtube.com/embed/9kQswBQkZgc?autoplay=1&mute=1&controls=0&loop=1&playlist=9kQswBQkZgc&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&enablejsapi=1&start=10&end=40" 
+                src="https://www.youtube.com/embed/9kQswBQkZgc?autoplay=1&mute=1&controls=0&loop=1&playlist=9kQswBQkZgc&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&disablekb=1&fs=0&autohide=1&start=12&end=35" 
                 title="Casa Xodó Video" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 class="pointer-events-none select-none">
             </iframe>
-            <div class="absolute inset-0 bg-gradient-to-t from-dark-bg via-dark-bg/60 to-dark-bg/40 z-10 pointer-events-none"></div>
+            <!-- Capa protectora superior para tapar elementos e interactividad -->
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-bg via-dark-bg/50 to-dark-bg/30 z-10 pointer-events-none"></div>
         </div>
 
         <div class="relative z-10 max-w-5xl mx-auto w-full text-center md:text-left" data-aos="fade-up">
