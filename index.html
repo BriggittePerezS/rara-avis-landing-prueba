@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Villa KISMET | Rara Avis Homes</title>
+    <title>Rara Avis Homes | Tu Boutique Inmobiliaria Online</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=200;300;400;500;600;700;900&display=swap" rel="stylesheet">
@@ -16,7 +16,6 @@
                     colors: {
                         'dark-bg': '#020617',
                         'neon-cyan': '#00ffff',
-                        'luxury-gold': '#d4af37',
                     }
                 }
             }
@@ -29,15 +28,14 @@
             background-color: #020617;
             color: white;
             margin: 0;
-            overflow-x: hidden;
         }
 
-        /* Degradado corporativo premium idéntico al index */
+        /* Degradado corporativo premium para la barra de navegación */
         .nav-exact-gradient {
             background: linear-gradient(to bottom, #29b1ec 0%, #51c6f3 100%);
         }
 
-        /* Alineación matemática central absoluta para el título idéntico al index */
+        /* Alineación matemática central absoluta para el título */
         @media (min-width: 768px) {
             .nav-center-title {
                 position: absolute;
@@ -57,283 +55,310 @@
             opacity: 0.95;
         }
 
-        .btn-luxury-outline {
-            border: 1px solid rgba(212, 175, 55, 0.6);
-            color: #d4af37;
-            transition: all 0.4s ease;
-        }
-
-        .btn-luxury-outline:hover {
-            background: #d4af37;
-            color: #070a0e;
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
-        }
-
-        .btn-luxury-solid {
-            background: #29b1ec;
-            color: #070a0e;
-            transition: all 0.4s ease;
-        }
-
-        .btn-luxury-solid:hover {
-            background: #51c6f3;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(41, 177, 236, 0.3);
-        }
-
         .glass-card {
             background: rgba(255, 255, 255, 0.02);
             backdrop-filter: blur(16px);
             border: 1px solid rgba(255, 255, 255, 0.07);
         }
 
-        .gold-divider {
-            height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
-        }
-
-        .floating-whatsapp {
-            animation: pulse-ring 2s infinite;
-        }
-
-        @keyframes pulse-ring {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
-            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
-
-        /* Contenedor del video en segundo plano */
-        .video-background {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100vw;
-            height: 100vh;
-            transform: translate(-50%, -50%);
-            pointer-events: none;
-            overflow: hidden;
-        }
-
-        .video-background iframe {
-            width: 100vw;
-            height: 56.25vw; /* Ratio 16:9 */
-            min-height: 100vh;
-            min-width: 177.77vh; /* Ratio 16:9 */
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        .bg-glow {
+            background: radial-gradient(circle at 50% 40%, rgba(41, 177, 236, 0.15) 0%, rgba(2, 6, 23, 0) 70%);
         }
     </style>
 </head>
 <body class="selection:bg-neon-cyan selection:text-dark-bg">
 
-    <!-- Navegación Fija Réplica Exacta de index.html -->
     <nav class="fixed w-full z-[100] nav-exact-gradient shadow-2xl h-24 flex items-center justify-between px-4 md:px-12">
         
         <div class="flex items-center justify-center w-24 h-24 md:w-28 md:h-28 flex-shrink-0 ml-4 md:ml-12 overflow-hidden">
-            <a href="index.html" class="w-full h-full flex items-center justify-center">
-                <img src="img/logo.png" alt="Rara Avis Homes Logo" class="w-full h-full object-contain scale-110">
-            </a>
+            <img src="img/logo.png" alt="Rara Avis Homes Logo" class="w-full h-full object-contain scale-110">
         </div>
 
         <div class="nav-center-title flex flex-col items-center justify-center text-center">
-            <a href="index.html" class="flex flex-col items-center justify-center">
-                <span class="text-white text-xl md:text-3xl font-light tracking-[0.25em] uppercase leading-none">
-                    Rara Avis
-                </span>
-                <span class="text-white/70 text-[10px] md:text-sm font-normal tracking-[0.45em] lowercase mt-1.5">
-                    homes
-                </span>
-            </a>
+            <span class="text-white text-xl md:text-3xl font-light tracking-[0.25em] uppercase leading-none">
+                Rara Avis
+            </span>
+            <span class="text-white/70 text-[10px] md:text-sm font-normal tracking-[0.45em] lowercase mt-1.5">
+                homes
+            </span>
         </div>
 
         <div class="flex items-center gap-3 flex-shrink-0">
-            <a href="index.html" class="hidden sm:inline-block bg-slate-950/40 text-white hover:bg-slate-950/70 border border-white/20 px-4 py-3 rounded-xl font-bold text-[10px] md:text-xs btn-premium uppercase tracking-widest transition-all">
-                INICIO
+            <a href="villas.html" class="hidden sm:inline-block bg-slate-950/40 text-white hover:bg-slate-950/70 border border-white/20 px-4 py-3 rounded-xl font-bold text-[10px] md:text-xs btn-premium uppercase tracking-widest transition-all">
+                VILLAS JÁVEA
             </a>
-            <a href="https://wa.me/34641984686?text=%C2%A1Hola%21+Me+interesa+obtener+el+dossier+de+la+Villa+KISMET." target="_blank" class="bg-white text-[#020617] px-5 py-3 rounded-xl font-black text-[10px] md:text-xs btn-premium uppercase tracking-widest block text-center shadow-lg">
-                DOSSIER
+            <a href="https://wa.me/34641984686?text=%C2%A1Hola%21+Me+pongo+en+contacto+con+Rara+Avis+Homes+para+solicitar+una+consulta" target="_blank" class="bg-white text-[#020617] px-5 py-3 rounded-xl font-black text-[10px] md:text-xs btn-premium uppercase tracking-widest block text-center shadow-lg">
+                CONSULTA DIRECTA
             </a>
         </div>
     </nav>
 
-    <!-- Botón Flotante de WhatsApp -->
-    <a href="https://wa.me/34641984686?text=%C2%A1Hola%21+Quiero+m%C3%A1s+informaci%C3%B3n+sobre+Villa+KISMET." target="_blank" class="fixed bottom-6 right-6 z-[120] bg-[#25D366] text-white p-3.5 rounded-full shadow-2xl floating-whatsapp flex items-center justify-center group" aria-label="WhatsApp">
-        <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-        </svg>
-        <span class="absolute -top-1 -right-1 bg-red-500 text-white text-[9px] font-bold w-5 h-5 rounded-full flex items-center justify-center border-2 border-dark-bg">1</span>
-    </a>
-
-    <!-- HERO FULLSCREEN CON VÍDEO DE FONDO -->
-    <section class="relative h-screen flex items-end pb-16 pt-28 px-6 md:px-16 overflow-hidden">
-        
-        <!-- Contenedor del Vídeo de YouTube -->
-        <div class="video-background z-0">
-            <iframe 
-                src="https://www.youtube.com/embed/9kQswBQkZgc?autoplay=1&mute=1&controls=0&loop=1&playlist=9kQswBQkZgc&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&enablejsapi=1" 
-                title="Casa Xodó Video" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
-            <!-- Capa de degradado sobre el vídeo -->
-            <div class="absolute inset-0 bg-gradient-to-t from-dark-bg via-dark-bg/60 to-dark-bg/40"></div>
-        </div>
-
-        <div class="relative z-10 max-w-5xl mx-auto w-full text-center md:text-left" data-aos="fade-up">
-            <span class="text-luxury-gold text-xs font-semibold tracking-[0.3em] uppercase block mb-3">
-                Exclusiva Promoción • Jávea
-            </span>
-            <h1 class="font-serif-title text-4xl md:text-7xl lg:text-8xl font-black uppercase text-white tracking-tight mb-4 leading-none">
-                UN NUEVO ESTÁNDAR<br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-sky-300">DE LUJO MEDITERRÁNEO</span>
+    <section class="relative min-h-screen flex items-center justify-center pt-28 bg-glow overflow-hidden">
+        <div class="max-w-5xl mx-auto px-6 text-center z-10">
+            
+            <h1 class="text-4xl md:text-[76px] font-black leading-[1.05] tracking-tighter uppercase mb-6" data-aos="fade-up">
+                RARA AVIS HOMES<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-sky-300">TU BOUTIQUE</span> <span class="text-neon-cyan">INMOBILIARIA ONLINE</span>
             </h1>
-            <p class="text-slate-300 text-sm md:text-xl font-light max-w-2xl mb-8 leading-relaxed">
-                Una colección de villas de autor con vistas panorámicas al mar, arquitectura de vanguardia y privacidad absoluta.
+            
+            <p class="text-lg md:text-2xl font-light text-slate-300 max-w-3xl mx-auto mb-12 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                Vender tu casa, <span class="text-white font-semibold underline decoration-neon-cyan underline-offset-8">sin límites</span> y sin complicaciones.
             </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-4" data-aos="zoom-in" data-aos-delay="400">
+                <a href="#contacto" class="bg-white text-[#020617] px-10 py-5 rounded-xl font-black text-base md:text-lg btn-premium uppercase tracking-[0.2em] shadow-xl w-full sm:w-auto text-center">
+                    VALORACIÓN GRATIS
+                </a>
+                <a href="villas.html" class="bg-gradient-to-r from-sky-400 to-cyan-400 text-dark-bg px-10 py-5 rounded-xl font-black text-base md:text-lg btn-premium uppercase tracking-[0.2em] shadow-xl w-full sm:w-auto text-center">
+                    VER VILLAS EN JÁVEA →
+                </a>
+            </div>
 
-            <div class="flex flex-col sm:flex-row items-center gap-4">
-                <a href="#detalles" class="btn-luxury-outline w-full sm:w-auto px-8 py-4 rounded-lg font-bold text-xs uppercase tracking-[0.2em] text-center">
-                    Explorar
-                </a>
-                <a href="https://wa.me/34641984686?text=%C2%A1Hola%21+Solicito+el+Dossier+de+Villa+KISMET." target="_blank" class="btn-luxury-solid w-full sm:w-auto px-8 py-4 rounded-lg font-black text-xs uppercase tracking-[0.2em] text-center">
-                    Descargar Dossier
-                </a>
+        </div>
+    </section>
+
+    <!-- BANNER DESTACADO: PROMOCIÓN VILLAS DE LUJO -->
+    <section class="py-12 bg-slate-950/80 border-y border-cyan-500/20 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="glass-card p-8 md:p-12 rounded-[2.5rem] border border-cyan-500/30 shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8" data-aos="fade-up">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 blur-3xl rounded-full pointer-events-none"></div>
+                
+                <div class="space-y-3 text-center md:text-left z-10">
+                    <span class="inline-block bg-neon-cyan/10 border border-neon-cyan/30 text-neon-cyan text-[10px] md:text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest">
+                        Promoción Exclusiva Obra Nueva
+                    </span>
+                    <h2 class="text-2xl md:text-4xl font-black text-white uppercase tracking-tight">
+                        Descubre Villa KISMET en Jávea
+                    </h2>
+                    <p class="text-slate-300 text-sm md:text-base font-light max-w-xl">
+                        Villas independientes de alto standing con vistas al mar, 5 dormitorios y piscina privada. Desde <strong class="text-white">2.300.000 €</strong>.
+                    </p>
+                </div>
+
+                <div class="z-10 w-full md:w-auto flex-shrink-0">
+                    <a href="villas.html" class="block text-center bg-white hover:bg-slate-100 text-dark-bg font-black text-xs md:text-sm px-8 py-5 rounded-xl uppercase tracking-widest btn-premium shadow-xl">
+                        EXPLORAR PROPIEDAD →
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <div class="gold-divider my-8"></div>
+    <section class="py-28 bg-slate-950/40 border-b border-white/5 relative">
+        <div class="max-w-6xl mx-auto px-6">
+            
+            <div class="glass-card p-8 md:p-12 rounded-[2.5rem] shadow-2xl relative overflow-hidden" data-aos="fade-up">
+                <div class="absolute -top-12 -right-12 w-40 h-40 bg-cyan-500/10 blur-3xl rounded-full"></div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10">
+                    
+                    <div class="md:col-span-7 text-center md:text-left">
+                        <div class="mb-6">
+                            <h4 class="text-neon-cyan font-bold tracking-widest text-xs uppercase mb-1">Sobre Mí</h4>
+                            <h3 class="text-2xl font-black uppercase text-white tracking-tight">Experiencia Exclusiva</h3>
+                        </div>
+                        
+                        <p class="text-sm md:text-base font-light text-slate-200 leading-relaxed">
+                            Hola, soy Ana María, fundadora de Rara Avis Homes.<br class="mb-2">
+                            Mi misión es transformar la venta de tu vivienda en un proceso exclusivo, digital y libre de estrés.<br class="mb-2">
+                            Nos encargamos de toda la gestión legal y administrativa, actuando como tu filtro y protección, para que disfrutes de una transacción impecable y sin complicaciones.
+                        </p>
+                    </div>
 
-    <!-- SECCIÓN ESTILO EDITORIAL: INTRODUCCIÓN -->
-    <section id="detalles" class="py-24 px-6 md:px-12 max-w-5xl mx-auto text-center" data-aos="fade-up">
-        <span class="text-slate-400 text-xs tracking-[0.3em] uppercase block mb-4">¿Por qué Villa Kismet?</span>
-        <h2 class="font-serif-title text-2xl md:text-5xl font-bold uppercase tracking-tight text-white mb-8 leading-snug">
-            LA ESENCIA DEL LUJO<br>
-            <span class="text-luxury-gold">CONTEMPORÁNEO EN LA COSTA</span>
-        </h2>
-        <p class="text-slate-300 text-sm md:text-lg font-light leading-relaxed max-w-3xl mx-auto">
-            Un concepto arquitectónico refinado donde los materiales sostenibles de primera calidad y las amenidades tipo resort se unen para crear una oportunidad inmobiliaria excepcional en el enclave más privileged de Jávea.
-        </p>
-    </section>
+                    <div class="md:col-span-5 w-full flex justify-center">
+                        <div class="glass-card p-2 rounded-[2rem] overflow-hidden shadow-xl w-full max-w-sm group bg-slate-950/40">
+                            <img src="img/ana1.jpeg" alt="Ana María - Rara Avis Homes" class="w-full h-[450px] object-contain rounded-[1.5rem] group-hover:scale-[1.02] transition-transform duration-500">
+                        </div>
+                    </div>
 
-    <!-- FICHA TÉCNICA -->
-    <section class="py-12 px-6 max-w-6xl mx-auto">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4" data-aos="fade-up">
-            <div class="glass-card p-6 rounded-2xl text-center">
-                <span class="text-luxury-gold text-xs font-semibold tracking-widest uppercase block mb-2">Dormitorios</span>
-                <span class="font-serif-title text-3xl md:text-5xl font-bold text-white">5</span>
+                </div>
             </div>
-            <div class="glass-card p-6 rounded-2xl text-center">
-                <span class="text-luxury-gold text-xs font-semibold tracking-widest uppercase block mb-2">Baños</span>
-                <span class="font-serif-title text-3xl md:text-5xl font-bold text-white">5</span>
-            </div>
-            <div class="glass-card p-6 rounded-2xl text-center">
-                <span class="text-luxury-gold text-xs font-semibold tracking-widest uppercase block mb-2">Construidos</span>
-                <span class="font-serif-title text-2xl md:text-4xl font-bold text-white">388 m²</span>
-            </div>
-            <div class="glass-card p-6 rounded-2xl text-center">
-                <span class="text-luxury-gold text-xs font-semibold tracking-widest uppercase block mb-2">Parcela</span>
-                <span class="font-serif-title text-2xl md:text-4xl font-bold text-white">1.000 m²</span>
-            </div>
+
         </div>
     </section>
 
-    <!-- BLOQUES NUMERADOS EDITORIALES -->
-    <section class="py-24 px-6 max-w-6xl mx-auto space-y-24">
+    <section class="py-28 bg-dark-bg relative overflow-hidden">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sky-500/[0.02] blur-[150px] rounded-full pointer-events-none"></div>
         
-        <!-- Bloque 01 -->
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center" data-aos="fade-up">
-            <div class="md:col-span-5 space-y-4">
-                <span class="font-serif-title text-6xl font-black text-luxury-gold/30 block">01</span>
-                <h3 class="font-serif-title text-2xl md:text-3xl font-bold uppercase text-white tracking-wide">
-                    Arquitectura & Diseño Integral
-                </h3>
-                <p class="text-slate-300 text-sm font-light leading-relaxed">
-                    Amplios espacios diáfanos diseñados para maximizar la luz natural mediterránea. Terrazas escalonadas, jardines curados y una piscina infinity que se funde con el horizonte.
-                </p>
-            </div>
-            <div class="md:col-span-7">
-                <div class="rounded-3xl overflow-hidden glass-card h-[350px] md:h-[450px]">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Diseño Interior" class="w-full h-full object-cover">
-                </div>
-            </div>
-        </div>
-
-        <!-- Bloque 02 -->
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center" data-aos="fade-up">
-            <div class="md:col-span-7 order-2 md:order-1">
-                <div class="rounded-3xl overflow-hidden glass-card h-[350px] md:h-[450px]">
-                    <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80" alt="Vistas al Mar" class="w-full h-full object-cover">
-                </div>
-            </div>
-            <div class="md:col-span-5 space-y-4 order-1 md:order-2">
-                <span class="font-serif-title text-6xl font-black text-luxury-gold/30 block">02</span>
-                <h3 class="font-serif-title text-2xl md:text-3xl font-bold uppercase text-white tracking-wide">
-                    Naturaleza & Privacidad Secundada
-                </h3>
-                <p class="text-slate-300 text-sm font-light leading-relaxed">
-                    Ubicada en una de las zonas más codiciadas de Jávea, ofreciendo un equilibrio perfecto entre la brisa marina, la tranquilidad del paisaje natural y la cercanía a playas exclusivas.
-                </p>
-            </div>
-        </div>
-
-    </section>
-
-    <div class="gold-divider my-8"></div>
-
-    <!-- FORMULARIO EDITORIAL -->
-    <section id="contacto-villa" class="py-24 px-6 max-w-4xl mx-auto">
-        <div class="glass-card p-8 md:p-16 rounded-[2.5rem] relative overflow-hidden" data-aos="zoom-in">
-            <div class="text-center mb-10">
-                <span class="text-luxury-gold text-xs font-semibold tracking-[0.3em] uppercase block mb-2">Atención Personalizada</span>
-                <h2 class="font-serif-title text-2xl md:text-4xl font-bold uppercase text-white tracking-tight mb-2">Solicitar Dossier & Planos</h2>
-                <p class="text-slate-400 text-xs md:text-sm font-light">Recibe la memoria completa de calidades y precios detallados.</p>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter">El Método Rara Avis</h2>
+                <div class="w-16 h-1 bg-neon-cyan mx-auto mt-4 rounded-full"></div>
             </div>
 
-            <form action="https://api.web3forms.com/submit" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <input type="hidden" name="access_key" value="6ee05328-7787-401b-9229-ea62fe657fd4">
-                <input type="hidden" name="Inmueble_Interes" value="Villa KISMET - Jávea">
-
-                <div class="flex flex-col gap-2">
-                    <label class="text-[10px] uppercase tracking-wider font-semibold text-slate-300">Nombre completo</label>
-                    <input type="text" name="Nombre" required placeholder="Tu nombre..." class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-luxury-gold outline-none text-sm text-white">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+                <div class="relative px-4" data-aos="fade-right">
+                    <div class="text-7xl font-black text-white/5 absolute -top-10 left-0 md:left-4 select-none">01</div>
+                    <h3 class="text-lg font-bold uppercase tracking-wider text-neon-cyan mb-3 relative z-10">Valoración de Precisión</h3>
+                    <p class="text-slate-200 font-light text-sm leading-relaxed">
+                        Analizamos las métricas reales del mercado digital para adjudicar a tu propiedad el precio óptimo de salida, maximizando tu rentabilidad desde el primer día.
+                    </p>
                 </div>
-
-                <div class="flex flex-col gap-2">
-                    <label class="text-[10px] uppercase tracking-wider font-semibold text-slate-300">Teléfono (WhatsApp)</label>
-                    <input type="tel" name="Teléfono" required placeholder="Tu número..." class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-luxury-gold outline-none text-sm text-white">
+                <div class="relative px-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-7xl font-black text-white/5 absolute -top-10 left-0 md:left-4 select-none">02</div>
+                    <h3 class="text-lg font-bold uppercase tracking-wider text-sky-400 mb-3 relative z-10">Estrategia Boutique</h3>
+                    <p class="text-slate-200 font-light text-sm leading-relaxed">
+                        Diseñamos un plan de posicionamiento exclusivo para tu inmueble, destacando sus fortalezas técnicas ante los compradores idóneos.
+                    </p>
                 </div>
-
-                <div class="flex flex-col gap-2 md:col-span-2">
-                    <label class="text-[10px] uppercase tracking-wider font-semibold text-slate-300">Mensaje opcional</label>
-                    <textarea name="Mensaje" rows="3" placeholder="Deseo recibir el dossier técnico completo..." class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-luxury-gold outline-none text-sm text-white resize-none"></textarea>
+                <div class="relative px-4" data-aos="fade-left" data-aos-delay="400">
+                    <div class="text-7xl font-black text-white/5 absolute -top-10 left-0 md:left-4 select-none">03</div>
+                    <h3 class="text-lg font-bold uppercase tracking-wider text-white mb-3 relative z-10">Cierre Digital Fluido</h3>
+                    <p class="text-slate-200 font-light text-sm leading-relaxed">
+                        Centralizamos y gestionamos de forma telemática toda la documentación legal obligatoria para garantizar una firma de compraventa ágil y sin sobresaltos.
+                    </p>
                 </div>
-
-                <button type="submit" class="md:col-span-2 btn-luxury-solid py-5 rounded-xl font-black tracking-[0.25em] uppercase text-xs md:text-sm shadow-xl w-full">
-                    Solicitar Información Exclusiva
-                </button>
-            </form>
+            </div>
         </div>
     </section>
 
-    <!-- FOOTER LIFESTYLE -->
-    <footer class="py-12 border-t border-white/5 text-center text-slate-500 text-xs">
-        <div class="max-w-6xl mx-auto px-6 flex flex-col items-center gap-4">
-            <a href="index.html" class="text-luxury-gold hover:underline uppercase tracking-widest text-xs font-semibold">
-                ← Volver a Rara Avis Homes
-            </a>
-            <p class="text-[10px] tracking-widest text-slate-600 uppercase">
+    <section class="py-20 bg-slate-950/20 border-t border-white/5 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="glass-card p-4 rounded-[2.5rem] overflow-hidden shadow-2xl relative bg-slate-950/60" data-aos="zoom-in">
+                
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-6 w-full flex justify-center">
+                        <img src="img/ana2.jpeg" alt="Ana María - Tu tranquilidad legal" class="w-full h-[350px] object-contain rounded-[2rem] hover:scale-[1.01] transition-transform duration-500">
+                    </div>
+                    
+                    <div class="md:col-span-6 p-4 text-center md:text-left">
+                        <span class="text-neon-cyan font-bold uppercase tracking-widest text-[10px] mb-2 block">Compromiso Rara Avis</span>
+                        <h3 class="text-2xl md:text-4xl font-black uppercase text-white tracking-tight leading-tight mb-4">
+                            Tu tranquilidad legal <br>es nuestra prioridad.
+                        </h3>
+                        <p class="text-slate-200 font-light text-sm leading-relaxed">
+                            Nos encargamos de proteger tu operación de principio a fin, asegurando que cada trámite digital cumpla strictly con los mayores estándares del sector.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" class="py-28 bg-slate-950/30 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            
+            <div class="text-center mb-20">
+                <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter">Servicios Avanzados Incluidos</h2>
+                <div class="w-16 h-1 bg-neon-cyan mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="glass-card p-10 rounded-[2rem] hover:border-sky-400/30 transition-all duration-300 group flex flex-col justify-between" data-aos="fade-up">
+                    <div>
+                        <div class="text-sky-400 text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">🔑</div>
+                        <h3 class="text-xl font-bold mb-4 uppercase tracking-wide text-white">Nota Simple Informativa</h3>
+                        <p class="text-slate-200 text-sm leading-relaxed font-light">
+                            Solicitamos y verificamos la información registral de tu inmueble para garantizar su estado legal y confirmar la titularidad actual.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-10 rounded-[2rem] hover:border-neon-cyan/30 transition-all duration-300 group flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                    <div>
+                        <div class="text-neon-cyan text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">⚡</div>
+                        <h3 class="text-xl font-bold mb-4 uppercase tracking-wide text-white">Certificado de Eficiencia Energética (CEE)</h3>
+                        <p class="text-slate-200 text-sm leading-relaxed font-light">
+                            Gestionamos la obtención de tu certificado energético oficial, documento obligatorio por ley para formalizar cualquier operación de compraventa.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="glass-card p-10 rounded-[2rem] hover:border-sky-400/30 transition-all duration-300 group flex flex-col justify-between" data-aos="fade-up" data-aos-delay="400">
+                    <div>
+                        <div class="text-sky-400 text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">🏢</div>
+                        <h3 class="text-xl font-bold mb-4 uppercase tracking-wide text-white">Informe de Evaluación del Edificio (IEE/ITE)</h3>
+                        <p class="text-slate-200 text-sm leading-relaxed font-light">
+                            Supervisamos el estado legal y técnico de la edificación mediante la ITE para asegurar que el inmueble cumple con la normativa vigente.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contacto" class="py-28 bg-slate-950/60 border-t border-white/5 relative overflow-hidden">
+        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-sky-500/5 blur-[120px] rounded-full"></div>
+        
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <div class="glass-card p-10 md:p-16 rounded-[2.5rem] shadow-2xl text-center">
+                
+                <h2 class="text-3xl md:text-5xl font-black mb-3 uppercase tracking-tighter">¿Hablamos hoy?</h2>
+                <p class="text-slate-400 text-xs md:text-sm uppercase tracking-widest mb-12">Asesoramiento Exclusivo a un Clic</p>
+                
+                <form action="https://api.web3forms.com/submit" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                    
+                    <input type="hidden" name="access_key" value="6ee05328-7787-401b-9229-ea62fe657fd4">
+
+                    <div class="flex flex-col gap-2">
+                        <label class="text-[10px] uppercase tracking-wider font-bold text-slate-200 ml-1">Tu nombre completo</label>
+                        <input type="text" name="Nombre_Completo" required placeholder="Introduce nombre y apellidos" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-neon-cyan focus:bg-white/10 outline-none text-sm text-white transition-all">
+                    </div>
+                    
+                    <div class="flex flex-col gap-2">
+                        <label class="text-[10px] uppercase tracking-wider font-bold text-slate-200 ml-1">Teléfono</label>
+                        <input type="tel" name="Teléfono" required placeholder="Introduce tu número" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-neon-cyan focus:bg-white/10 outline-none text-sm text-white transition-all">
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <label class="text-[10px] uppercase tracking-wider font-bold text-slate-200 ml-1">¿Dónde se encuentra el inmueble? (Población y zona)</label>
+                        <input type="text" name="Ubicación_Inmueble" required placeholder="Población y zona..." class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-neon-cyan focus:bg-white/10 outline-none text-sm text-white transition-all">
+                    </div>
+
+                    <div class="flex flex-col gap-2">
+                        <label class="text-[10px] uppercase tracking-wider font-bold text-slate-200 ml-1">Tipo de inmueble</label>
+                        <input type="text" name="Tipo_Inmueble" required placeholder="Piso, Casa, Ático, Estudio..." class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-neon-cyan focus:bg-white/10 outline-none text-sm text-white transition-all">
+                    </div>
+
+                    <div class="flex flex-col gap-2 md:col-span-2">
+                        <label class="text-[10px] uppercase tracking-wider font-bold text-slate-200 ml-1">Cuéntame</label>
+                        <textarea name="Urgencia_Y_Necesidad" rows="4" placeholder="Cuéntame brevemente tu situación..." class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-neon-cyan focus:bg-white/10 outline-none text-sm text-white transition-all resize-none"></textarea>
+                    </div>
+
+                    <div class="md:col-span-2 flex items-start gap-3 mt-2">
+                        <input type="checkbox" id="legal-privacy" required class="w-4 h-4 mt-0.5 rounded border-white/20 bg-white/5 text-neon-cyan focus:ring-0 focus:ring-offset-0 cursor-pointer accent-cyan-400">
+                        <label for="legal-privacy" class="text-xs text-slate-300 font-light leading-snug cursor-pointer select-none">
+                            He leído y acepto la <a href="politica-privacidad.html" target="_blank" class="text-sky-400 hover:underline">Política de Privacidad</a>. Acepto el tratamiento de mis datos exclusivamente para gestionar mi consulta inmobiliaria.
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="md:col-span-2 mt-4 bg-gradient-to-r from-sky-400 to-cyan-400 text-dark-bg py-4 rounded-xl font-black tracking-[0.25em] uppercase text-sm btn-premium shadow-lg w-full text-center">
+                        ENVIAR SOLICITUD
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 bg-slate-950/60 border-t border-white/5 text-center text-slate-500 font-medium tracking-wider">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col items-center gap-6">
+            
+            <div class="flex flex-wrap justify-center gap-x-8 gap-y-3 text-xs uppercase tracking-[0.15em]">
+                <a href="aviso-legal.html" class="hover:text-white transition-colors duration-200">Aviso Legal</a>
+                <a href="politica-privacidad.html" class="hover:text-white transition-colors duration-200">Política de Privacidad</a>
+                <a href="politica-cookies.html" class="hover:text-white transition-colors duration-200">Política de Cookies</a>
+            </div>
+
+            <div class="w-12 h-px bg-white/10"></div>
+
+            <div class="text-[10px] uppercase tracking-[0.3em] font-light">
                 &copy; <span id="current-year"></span> Rara Avis Homes. Todos los derechos reservados.
+            </div>
+            
+            <p class="text-[9px] font-extralight text-slate-600 max-w-xl uppercase tracking-widest leading-relaxed">
+                Este sitio web cumple rigurosamente con el Reglamento General de Protección de Datos (RGPD) y la normativa LSSI-CE de servicios digitales.
             </p>
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ duration: 1000, once: true });
+        AOS.init({ duration: 1200, once: true });
         document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
 </body>
