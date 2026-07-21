@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Villa KISMET | Promoción Exclusiva - Rara Avis Homes</title>
+    <title>Villa KISMET | Rara Avis Homes</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Montserrat:wght@200;300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <script>
@@ -14,8 +14,13 @@
             theme: {
                 extend: {
                     colors: {
-                        'dark-bg': '#020617',
+                        'dark-bg': '#070a0e',
+                        'luxury-gold': '#d4af37',
                         'neon-cyan': '#00ffff',
+                    },
+                    fontFamily: {
+                        'serif-title': ['Cinzel', 'serif'],
+                        'sans-body': ['Montserrat', 'sans-serif'],
                     }
                 }
             }
@@ -25,206 +30,240 @@
     <style>
         body { 
             font-family: 'Montserrat', sans-serif; 
-            background-color: #020617;
-            color: white;
+            background-color: #070a0e;
+            color: #e2e8f0;
             margin: 0;
+            overflow-x: hidden;
         }
 
-        .nav-exact-gradient {
-            background: linear-gradient(to bottom, #29b1ec 0%, #51c6f3 100%);
+        .nav-glass {
+            background: rgba(7, 10, 14, 0.75);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         }
 
-        @media (min-width: 768px) {
-            .nav-center-title {
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-            }
+        .btn-luxury-outline {
+            border: 1px solid rgba(212, 175, 55, 0.6);
+            color: #d4af37;
+            transition: all 0.4s ease;
         }
 
-        .btn-premium {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        .btn-luxury-outline:hover {
+            background: #d4af37;
+            color: #070a0e;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
         }
 
-        .btn-premium:hover {
-            transform: scale(1.03) translateY(-1px);
-            box-shadow: 0 10px 25px rgba(0, 255, 255, 0.2);
+        .btn-luxury-solid {
+            background: #29b1ec;
+            color: #070a0e;
+            transition: all 0.4s ease;
+        }
+
+        .btn-luxury-solid:hover {
+            background: #51c6f3;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(41, 177, 236, 0.3);
         }
 
         .glass-card {
-            background: rgba(255, 255, 255, 0.02);
+            background: rgba(255, 255, 255, 0.015);
             backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.06);
         }
 
-        .bg-glow {
-            background: radial-gradient(circle at 50% 30%, rgba(41, 177, 236, 0.12) 0%, rgba(2, 6, 23, 0) 70%);
+        .gold-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
+        }
+
+        .floating-whatsapp {
+            animation: pulse-ring 2s infinite;
+        }
+
+        @keyframes pulse-ring {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
     </style>
 </head>
-<body class="selection:bg-neon-cyan selection:text-dark-bg">
+<body class="selection:bg-luxury-gold selection:text-dark-bg">
 
-    <!-- Navegación Corporativa -->
-    <nav class="fixed w-full z-[100] nav-exact-gradient shadow-2xl h-24 flex items-center justify-between px-4 md:px-12">
-        <a href="index.html" class="flex items-center justify-center w-24 h-24 md:w-28 md:h-28 flex-shrink-0 ml-2 md:ml-12 overflow-hidden">
-            <img src="img/logo.png" alt="Rara Avis Homes Logo" class="w-full h-full object-contain scale-110">
+    <!-- Navegación Fija Estilo Editorial -->
+    <nav class="fixed w-full z-[100] nav-glass h-20 flex items-center justify-between px-6 md:px-12">
+        <a href="index.html" class="flex items-center gap-3">
+            <img src="img/logo.png" alt="Rara Avis Homes Logo" class="h-10 w-auto object-contain">
+            <span class="font-serif-title text-sm md:text-base tracking-[0.3em] uppercase text-white hidden sm:inline">RARA AVIS</span>
         </a>
 
-        <div class="nav-center-title flex flex-col items-center justify-center text-center">
-            <span class="text-white text-xl md:text-3xl font-light tracking-[0.25em] uppercase leading-none">
-                Rara Avis
-            </span>
-            <span class="text-white/70 text-[10px] md:text-sm font-normal tracking-[0.45em] lowercase mt-1.5">
-                homes
-            </span>
-        </div>
-
-        <div class="flex-shrink-0">
-            <a href="https://wa.me/34641984686?text=%C2%A1Hola%21+Me+interesa+obtener+el+dossier+de+la+Villa+KISMET." target="_blank" class="bg-white text-[#020617] px-4 py-3 md:px-5 md:py-3 rounded-xl font-black text-[10px] md:text-xs btn-premium uppercase tracking-widest block text-center shadow-lg">
-                WHATSAPP
+        <div class="flex items-center gap-4">
+            <a href="#contacto-villa" class="text-[10px] md:text-xs font-semibold tracking-[0.2em] uppercase text-slate-300 hover:text-white transition-colors">
+                Contacto
+            </a>
+            <a href="https://wa.me/34641984686?text=%C2%A1Hola%21+Me+interesa+obtener+el+dossier+de+la+Villa+KISMET." target="_blank" class="btn-luxury-solid font-black text-[10px] md:text-xs px-4 py-2.5 rounded-lg uppercase tracking-widest">
+                Dossier
             </a>
         </div>
     </nav>
 
-    <!-- Hero / Encabezado de la Villa -->
-    <section class="relative pt-36 pb-12 bg-glow overflow-hidden">
-        <div class="max-w-6xl mx-auto px-6">
-            
-            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4" data-aos="fade-up">
-                <div>
-                    <span class="inline-block bg-neon-cyan/10 border border-neon-cyan/30 text-neon-cyan text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-3">
-                        Exclusiva Promoción
-                    </span>
-                    <h1 class="text-3xl md:text-6xl font-black uppercase tracking-tight text-white">
-                        Villa KISMET
-                    </h1>
-                    <p class="text-slate-400 text-sm md:text-base font-light mt-1">
-                        Nueva construcción en venta con vistas al mar • Jávea
-                    </p>
-                </div>
-                
-                <div class="text-left md:text-right">
-                    <span class="text-xs text-slate-400 uppercase tracking-widest block">Precio de Salida</span>
-                    <span class="text-3xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white to-sky-300">
-                        2.300.000 €
-                    </span>
-                </div>
+    <!-- Botón Flotante de WhatsApp Estilo Referencia -->
+    <a href="https://wa.me/34641984686?text=%C2%A1Hola%21+Quiero+m%C3%A1s+informaci%C3%B3n+sobre+Villa+KISMET." target="_blank" class="fixed bottom-6 right-6 z-[120] bg-[#25D366] text-white p-3.5 rounded-full shadow-2xl floating-whatsapp flex items-center justify-center group" aria-label="WhatsApp">
+        <svg class="w-7 h-7 fill-current" viewBox="0 0 24 24">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+        </svg>
+        <span class="absolute -top-1 -right-1 bg-red-500 text-white text-[9px] font-bold w-5 h-5 rounded-full flex items-center justify-center border-2 border-dark-bg">1</span>
+    </a>
+
+    <!-- HERO IMPACTANTE FULLSCREEN -->
+    <section class="relative h-screen flex items-end pb-16 pt-24 px-6 md:px-16 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=2000&q=80" alt="Villa KISMET" class="w-full h-full object-cover scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark-bg via-dark-bg/60 to-dark-bg/30"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto w-full text-center md:text-left" data-aos="fade-up">
+            <span class="text-luxury-gold text-xs font-semibold tracking-[0.3em] uppercase block mb-3">
+                Exclusiva Promoción • Jávea
+            </span>
+            <h1 class="font-serif-title text-4xl md:text-7xl lg:text-8xl font-black uppercase text-white tracking-tight mb-4 leading-none">
+                UN NUEVO ESTÁNDAR<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-sky-300">DE LUJO MEDITERRÁNEO</span>
+            </h1>
+            <p class="text-slate-300 text-sm md:text-xl font-light max-w-2xl mb-8 leading-relaxed">
+                Una colección de villas de autor con vistas panorámicas al mar, arquitectura de vanguardia y privacidad absoluta.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center gap-4">
+                <a href="#detalles" class="btn-luxury-outline w-full sm:w-auto px-8 py-4 rounded-lg font-bold text-xs uppercase tracking-[0.2em] text-center">
+                    Explorar
+                </a>
+                <a href="https://wa.me/34641984686?text=%C2%A1Hola%21+Solicito+el+Dossier+de+Villa+KISMET." target="_blank" class="btn-luxury-solid w-full sm:w-auto px-8 py-4 rounded-lg font-black text-xs uppercase tracking-[0.2em] text-center">
+                    Descargar Dossier
+                </a>
             </div>
-
-            <!-- Galería de Demostración (Renders/Fotos) -->
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-4 mb-12" data-aos="zoom-in" data-aos-delay="200">
-                <div class="md:col-span-8 h-[350px] md:h-[500px] rounded-3xl overflow-hidden glass-card group relative">
-                    <img src="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=1200&q=80" alt="Villa Principal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-dark-bg/80 via-transparent to-transparent"></div>
-                    <span class="absolute bottom-6 left-6 text-xs font-semibold uppercase tracking-widest bg-dark-bg/60 backdrop-blur-md px-4 py-2 rounded-xl border border-white/10">
-                        Exterior & Piscina Privada
-                    </span>
-                </div>
-                <div class="md:col-span-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-4">
-                    <div class="h-[170px] md:h-[242px] rounded-3xl overflow-hidden glass-card group relative">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Interior Salón" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    </div>
-                    <div class="h-[170px] md:h-[242px] rounded-3xl overflow-hidden glass-card group relative">
-                        <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80" alt="Terraza Vista Mar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Ficha Técnica Resumida -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16" data-aos="fade-up">
-                <div class="glass-card p-6 rounded-2xl text-center border-white/5 hover:border-neon-cyan/30 transition-all">
-                    <span class="text-neon-cyan text-2xl block mb-1">🛏️</span>
-                    <span class="text-2xl font-black block">5</span>
-                    <span class="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">Dormitorios</span>
-                </div>
-                <div class="glass-card p-6 rounded-2xl text-center border-white/5 hover:border-neon-cyan/30 transition-all">
-                    <span class="text-neon-cyan text-2xl block mb-1">🚿</span>
-                    <span class="text-2xl font-black block">5</span>
-                    <span class="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">Baños en Suite</span>
-                </div>
-                <div class="glass-card p-6 rounded-2xl text-center border-white/5 hover:border-neon-cyan/30 transition-all">
-                    <span class="text-neon-cyan text-2xl block mb-1">📐</span>
-                    <span class="text-2xl font-black block">388 m²</span>
-                    <span class="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">Construidos</span>
-                </div>
-                <div class="glass-card p-6 rounded-2xl text-center border-white/5 hover:border-neon-cyan/30 transition-all">
-                    <span class="text-neon-cyan text-2xl block mb-1">🌳</span>
-                    <span class="text-2xl font-black block">1.000 m²</span>
-                    <span class="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">Parcela</span>
-                </div>
-            </div>
-
-            <!-- Descripción Detallada y Características -->
-            <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-start mb-20">
-                <div class="md:col-span-7 space-y-6 text-slate-300 font-light text-sm md:text-base leading-relaxed" data-aos="fade-right">
-                    <h2 class="text-2xl font-bold uppercase text-white tracking-tight">Descripción del Inmueble</h2>
-                    <p>
-                        ¡Bienvenidos a "AIRES DE JÁVEA"! Les presentamos Villa KISMET, donde el lujo, el diseño vanguardista y la tranquilidad mediterránea se encuentran.
-                    </p>
-                    <p>
-                        KISMET, cuyo nombre significa "destino" o "suerte", es una villa de nueva construcción que redefine el concepto de vida de alta gama. Esta propiedad de 5 habitaciones y 5 baños ha sido diseñada para ofrecer el máximo confort y estilo.
-                    </p>
-                    <p>
-                        Con acabados de las más altas calidades, combina a la perfección el estilo contemporáneo con detalles cálidos de materiales de primera categoría. Sus amplios interiores se abren a un jardín privado con piscina infinity y espectaculares vistas panorámicas.
-                    </p>
-                </div>
-
-                <div class="md:col-span-5 glass-card p-8 rounded-3xl" data-aos="fade-left">
-                    <h3 class="text-lg font-bold uppercase text-white tracking-wide mb-6">Equipamiento Exclusivo</h3>
-                    <ul class="space-y-3 text-xs md:text-sm text-slate-300 font-light">
-                        <li class="flex items-center gap-3"><span class="text-neon-cyan">✓</span> Piscina privada infinity</li>
-                        <li class="flex items-center gap-3"><span class="text-neon-cyan">✓</span> Garaje y parking privado</li>
-                        <li class="flex items-center gap-3"><span class="text-neon-cyan">✓</span> Vistas al mar y la montaña</li>
-                        <li class="flex items-center gap-3"><span class="text-neon-cyan">✓</span> Climatización por aerotermia</li>
-                        <li class="flex items-center gap-3"><span class="text-neon-cyan">✓</span> Año de construcción: 2024</li>
-                        <li class="flex items-center gap-3"><span class="text-neon-cyan">✓</span> Orientación Sur</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Formulario Directo de Solicitud de Dossier -->
-            <div id="contacto-villa" class="glass-card p-8 md:p-14 rounded-[2.5rem] relative overflow-hidden" data-aos="zoom-in">
-                <div class="text-center max-w-2xl mx-auto mb-10">
-                    <h2 class="text-2xl md:text-4xl font-black uppercase tracking-tight mb-2">Solicitar Dossier Completo</h2>
-                    <p class="text-slate-400 text-xs md:text-sm font-light uppercase tracking-widest">
-                        Recibe los planos técnicos y la memoria de calidades al instante
-                    </p>
-                </div>
-
-                <form action="https://api.web3forms.com/submit" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <input type="hidden" name="access_key" value="6ee05328-7787-401b-9229-ea62fe657fd4">
-                    <input type="hidden" name="Inmueble_Interes" value="Villa KISMET - Jávea">
-
-                    <div class="flex flex-col gap-2">
-                        <label class="text-[10px] uppercase tracking-wider font-bold text-slate-200">Nombre completo</label>
-                        <input type="text" name="Nombre" required placeholder="Tu nombre..." class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-neon-cyan outline-none text-sm text-white">
-                    </div>
-
-                    <div class="flex flex-col gap-2">
-                        <label class="text-[10px] uppercase tracking-wider font-bold text-slate-200">Teléfono (WhatsApp)</label>
-                        <input type="tel" name="Teléfono" required placeholder="Tu número..." class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-neon-cyan outline-none text-sm text-white">
-                    </div>
-
-                    <div class="flex flex-col gap-2 md:col-span-2">
-                        <label class="text-[10px] uppercase tracking-wider font-bold text-slate-200">Mensaje opcional</label>
-                        <textarea name="Mensaje" rows="3" placeholder="Deseo recibir más información sobre Villa KISMET..." class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-neon-cyan outline-none text-sm text-white resize-none"></textarea>
-                    </div>
-
-                    <button type="submit" class="md:col-span-2 bg-gradient-to-r from-sky-400 to-cyan-400 text-dark-bg py-4 rounded-xl font-black tracking-[0.2em] uppercase text-xs md:text-sm btn-premium shadow-lg w-full mt-2">
-                        RECIBIR INFORMACIÓN DE LA VILLA
-                    </button>
-                </form>
-            </div>
-
         </div>
     </section>
 
-    <!-- Footer Discreto hacia la Web Principal -->
-    <footer class="py-12 bg-slate-950 border-t border-white/5 text-center text-slate-500 text-xs">
+    <div class="gold-divider my-8"></div>
+
+    <!-- SECCIÓN ESTILO EDITORIAL: INTRODUCCIÓN -->
+    <section id="detalles" class="py-24 px-6 md:px-12 max-w-5xl mx-auto text-center" data-aos="fade-up">
+        <span class="text-slate-400 text-xs tracking-[0.3em] uppercase block mb-4">¿Por qué Villa Kismet?</span>
+        <h2 class="font-serif-title text-2xl md:text-5xl font-bold uppercase tracking-tight text-white mb-8 leading-snug">
+            LA ESENCIA DEL LUJO<br>
+            <span class="text-luxury-gold">CONTEMPORÁNEO EN LA COSTA</span>
+        </h2>
+        <p class="text-slate-300 text-sm md:text-lg font-light leading-relaxed max-w-3xl mx-auto">
+            Un concepto arquitectónico refinado donde los materiales sostenibles de primera calidad y las amenidades tipo resort se unen para crear una oportunidad inmobiliaria excepcional en el enclave más privilegiado de Jávea.
+        </p>
+    </section>
+
+    <!-- FICHA TÉCNICA TIPO TARJETAS DE MUESTRA -->
+    <section class="py-12 px-6 max-w-6xl mx-auto">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4" data-aos="fade-up">
+            <div class="glass-card p-6 rounded-2xl text-center">
+                <span class="text-luxury-gold text-xs font-semibold tracking-widest uppercase block mb-2">Dormitorios</span>
+                <span class="font-serif-title text-3xl md:text-5xl font-bold text-white">5</span>
+            </div>
+            <div class="glass-card p-6 rounded-2xl text-center">
+                <span class="text-luxury-gold text-xs font-semibold tracking-widest uppercase block mb-2">Baños</span>
+                <span class="font-serif-title text-3xl md:text-5xl font-bold text-white">5</span>
+            </div>
+            <div class="glass-card p-6 rounded-2xl text-center">
+                <span class="text-luxury-gold text-xs font-semibold tracking-widest uppercase block mb-2">Construidos</span>
+                <span class="font-serif-title text-2xl md:text-4xl font-bold text-white">388 m²</span>
+            </div>
+            <div class="glass-card p-6 rounded-2xl text-center">
+                <span class="text-luxury-gold text-xs font-semibold tracking-widest uppercase block mb-2">Parcela</span>
+                <span class="font-serif-title text-2xl md:text-4xl font-bold text-white">1.000 m²</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- BLOQUES NUMERADOS EDITORIALES (01, 02, 03) MUESTRA VÍDEO -->
+    <section class="py-24 px-6 max-w-6xl mx-auto space-y-24">
+        
+        <!-- Bloque 01 -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center" data-aos="fade-up">
+            <div class="md:col-span-5 space-y-4">
+                <span class="font-serif-title text-6xl font-black text-luxury-gold/30 block">01</span>
+                <h3 class="font-serif-title text-2xl md:text-3xl font-bold uppercase text-white tracking-wide">
+                    Arquitectura & Diseño Integral
+                </h3>
+                <p class="text-slate-300 text-sm font-light leading-relaxed">
+                    Amplios espacios diáfanos diseñados para maximizar la luz natural mediterránea. Terrazas escalonadas, jardines curados y una piscina infinity que se funde con el horizonte.
+                </p>
+            </div>
+            <div class="md:col-span-7">
+                <div class="rounded-3xl overflow-hidden glass-card h-[350px] md:h-[450px]">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Diseño Interior" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+
+        <!-- Bloque 02 -->
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center" data-aos="fade-up">
+            <div class="md:col-span-7 order-2 md:order-1">
+                <div class="rounded-3xl overflow-hidden glass-card h-[350px] md:h-[450px]">
+                    <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1200&q=80" alt="Vistas al Mar" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="md:col-span-5 space-y-4 order-1 md:order-2">
+                <span class="font-serif-title text-6xl font-black text-luxury-gold/30 block">02</span>
+                <h3 class="font-serif-title text-2xl md:text-3xl font-bold uppercase text-white tracking-wide">
+                    Naturaleza & Privacidad Secundada
+                </h3>
+                <p class="text-slate-300 text-sm font-light leading-relaxed">
+                    Ubicada en una de las zonas más codiciadas de Jávea, ofreciendo un equilibrio perfecto entre la brisa marina, la tranquilidad del paisaje natural y la cercanía a playas exclusivas.
+                </p>
+            </div>
+        </div>
+
+    </section>
+
+    <div class="gold-divider my-8"></div>
+
+    <!-- FORMULARIO EDITORIAL PARA DESCARGAR DOSSIER -->
+    <section id="contacto-villa" class="py-24 px-6 max-w-4xl mx-auto">
+        <div class="glass-card p-8 md:p-16 rounded-[2.5rem] relative overflow-hidden" data-aos="zoom-in">
+            <div class="text-center mb-10">
+                <span class="text-luxury-gold text-xs font-semibold tracking-[0.3em] uppercase block mb-2">Atención Personalizada</span>
+                <h2 class="font-serif-title text-2xl md:text-4xl font-bold uppercase text-white tracking-tight mb-2">Solicitar Dossier & Planos</h2>
+                <p class="text-slate-400 text-xs md:text-sm font-light">Recibe la memoria completa de calidades y precios detallados.</p>
+            </div>
+
+            <form action="https://api.web3forms.com/submit" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <input type="hidden" name="access_key" value="6ee05328-7787-401b-9229-ea62fe657fd4">
+                <input type="hidden" name="Inmueble_Interes" value="Villa KISMET - Jávea">
+
+                <div class="flex flex-col gap-2">
+                    <label class="text-[10px] uppercase tracking-wider font-semibold text-slate-300">Nombre completo</label>
+                    <input type="text" name="Nombre" required placeholder="Tu nombre..." class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-luxury-gold outline-none text-sm text-white">
+                </div>
+
+                <div class="flex flex-col gap-2">
+                    <label class="text-[10px] uppercase tracking-wider font-semibold text-slate-300">Teléfono (WhatsApp)</label>
+                    <input type="tel" name="Teléfono" required placeholder="Tu número..." class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-luxury-gold outline-none text-sm text-white">
+                </div>
+
+                <div class="flex flex-col gap-2 md:col-span-2">
+                    <label class="text-[10px] uppercase tracking-wider font-semibold text-slate-300">Mensaje opcional</label>
+                    <textarea name="Mensaje" rows="3" placeholder="Deseo recibir el dossier técnico completo..." class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-luxury-gold outline-none text-sm text-white resize-none"></textarea>
+                </div>
+
+                <button type="submit" class="md:col-span-2 btn-luxury-solid py-5 rounded-xl font-black tracking-[0.25em] uppercase text-xs md:text-sm shadow-xl w-full">
+                    Solicitar Información Exclusiva
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER LIFESTYLE -->
+    <footer class="py-12 border-t border-white/5 text-center text-slate-500 text-xs">
         <div class="max-w-6xl mx-auto px-6 flex flex-col items-center gap-4">
-            <a href="index.html" class="text-sky-400 hover:underline uppercase tracking-widest text-xs font-semibold">
-                ← Volver a la página principal de Rara Avis Homes
+            <a href="index.html" class="text-luxury-gold hover:underline uppercase tracking-widest text-xs font-semibold">
+                ← Volver a Rara Avis Homes
             </a>
             <p class="text-[10px] tracking-widest text-slate-600 uppercase">
                 &copy; <span id="current-year"></span> Rara Avis Homes. Todos los derechos reservados.
