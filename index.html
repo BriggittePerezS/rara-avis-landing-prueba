@@ -6,8 +6,8 @@
     <title>Rara Avis Homes | Tu Boutique Inmobiliaria Online</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Tipografías: Outfit (tech/base), Montserrat (clean) y Cinzel (Serif Elegante para el título de la imagen) -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:ital,wght@0,400..800;1,400..800&family=Outfit:wght@200;300;400;500;600;700;800&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tipografía Elegante Serif (Cinzel) aplicada globalmente a la web -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <script>
@@ -21,7 +21,6 @@
                         'cyan-brand': '#51c6f3',
                     },
                     fontFamily: {
-                        'tech': ['Outfit', 'sans-serif'],
                         'serif-title': ['Cinzel', 'serif'],
                         'sans-clean': ['Montserrat', 'sans-serif'],
                     }
@@ -32,7 +31,7 @@
 
     <style>
         body { 
-            font-family: 'Outfit', sans-serif; 
+            font-family: 'Cinzel', serif; 
             background-color: #020617;
             color: #f1f5f9;
             margin: 0;
@@ -43,7 +42,7 @@
             background: linear-gradient(to bottom, #29b1ec 0%, #51c6f3 100%);
         }
 
-        /* Alineación matemática central absoluta para el título */
+        /* Alineación central absoluta para la navbar */
         @media (min-width: 768px) {
             .nav-center-title {
                 position: absolute;
@@ -57,6 +56,7 @@
         .btn-tech-glow {
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             letter-spacing: 0.15em;
+            font-family: 'Montserrat', sans-serif;
         }
 
         .btn-tech-glow:hover {
@@ -66,6 +66,7 @@
 
         .btn-premium {
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            font-family: 'Montserrat', sans-serif;
         }
 
         .btn-premium:hover {
@@ -87,14 +88,14 @@
             box-shadow: 0 10px 35px -10px rgba(0, 255, 255, 0.15);
         }
 
-        /* Fondo dinámico tech */
+        /* Fondo dinámico */
         .bg-tech-grid {
             background-image: radial-gradient(rgba(41, 177, 236, 0.1) 1px, transparent 1px);
             background-size: 30px 30px;
         }
     </style>
 </head>
-<body class="selection:bg-neon-cyan selection:text-dark-bg bg-dark-bg text-slate-200 bg-tech-grid">
+<body class="selection:bg-neon-cyan selection:text-dark-bg bg-dark-bg text-slate-200 bg-tech-grid font-serif-title">
 
     <!-- NAVBAR CON DEGRADADO ORIGINAL -->
     <nav class="fixed w-full z-[100] nav-exact-gradient shadow-2xl h-24 flex items-center justify-between px-4 md:px-12">
@@ -104,10 +105,10 @@
         </div>
 
         <div class="nav-center-title flex flex-col items-center justify-center text-center">
-            <span class="text-white text-2xl md:text-4xl font-extrabold tracking-[0.25em] uppercase leading-none font-tech">
-                Rara Avis
+            <span class="text-white text-2xl md:text-4xl font-normal tracking-[0.2em] uppercase leading-none font-serif-title">
+                RARA AVIS
             </span>
-            <span class="text-white/90 text-[10px] md:text-xs font-medium tracking-[0.5em] lowercase mt-1 font-sans-clean">
+            <span class="text-white/90 text-[10px] md:text-xs font-normal tracking-[0.4em] lowercase mt-1 font-serif-title italic">
                 homes
             </span>
         </div>
@@ -122,7 +123,7 @@
         </div>
     </nav>
 
-    <!-- HERO SECTION VANGUARDISTA -->
+    <!-- HERO SECTION -->
     <section class="relative min-h-screen flex items-center justify-center pt-28 overflow-hidden">
         
         <!-- Esferas luminosas de fondo -->
@@ -131,7 +132,7 @@
 
         <div class="max-w-5xl mx-auto px-6 text-center z-10">
             
-            <!-- TÍTULO CON ESTILO EXACTO A LA IMAGEN (ESTILO SERIF ELEGANTE / CINZEL) -->
+            <!-- TÍTULO PRINCIPAL EXACTO A TU IMAGEN -->
             <h1 class="text-3xl sm:text-5xl md:text-[68px] font-normal leading-[1.25] tracking-widest uppercase mb-8 text-white font-serif-title" data-aos="fade-up">
                 RARA AVIS HOMES<br>
                 <span class="text-neon-cyan font-normal drop-shadow-[0_0_15px_rgba(0,255,255,0.4)]">TU BOUTIQUE</span> 
@@ -143,10 +144,9 @@
                 Vender tu casa, <span class="text-neon-cyan font-semibold underline decoration-sky-brand underline-offset-8">sin límites</span> y sin complicaciones.
             </p>
             
-            <!-- CONTENEDOR DE BOTONES Y PÍLDORA -->
+            <!-- CONTENEDOR DE BOTONES Y PÍLDORA ABAJO -->
             <div class="flex flex-col items-center gap-6" data-aos="zoom-in" data-aos-delay="400">
                 
-                <!-- Los 2 botones estilo cápsula -->
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4 w-full sm:w-auto">
                     <a href="#contacto" class="bg-gradient-to-r from-sky-brand to-neon-cyan text-dark-bg font-black text-xs md:text-sm px-8 py-3.5 rounded-full btn-tech-glow uppercase shadow-lg w-full sm:w-auto text-center transition-all">
                         VALORACIÓN GRATIS
@@ -159,7 +159,7 @@
                 <!-- Píldora Ubicada Abajo -->
                 <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-neon-cyan/30 bg-slate-900/80 backdrop-blur-md shadow-lg">
                     <span class="w-2 h-2 rounded-full bg-neon-cyan animate-pulse"></span>
-                    <span class="text-neon-cyan text-[11px] md:text-xs uppercase tracking-[0.25em] font-semibold">
+                    <span class="text-neon-cyan text-[11px] md:text-xs uppercase tracking-[0.25em] font-semibold font-sans-clean">
                         SELECCIÓN EXCLUSIVA & ATENCIÓN PERSONALIZADA
                     </span>
                 </div>
@@ -179,8 +179,8 @@
                     
                     <div class="md:col-span-7 text-center md:text-left">
                         <div class="mb-8">
-                            <span class="text-neon-cyan font-bold tracking-[0.3em] text-xs uppercase mb-2 block">Sobre Mí</span>
-                            <h3 class="text-3xl md:text-5xl font-extrabold uppercase text-white tracking-tight font-tech">Experiencia Exclusiva</h3>
+                            <span class="text-neon-cyan font-bold tracking-[0.3em] text-xs uppercase mb-2 block font-sans-clean">Sobre Mí</span>
+                            <h2 class="text-3xl md:text-5xl font-normal uppercase text-white tracking-widest font-serif-title">Experiencia Exclusiva</h2>
                         </div>
                         
                         <p class="text-sm md:text-base font-light text-slate-300 leading-relaxed font-sans-clean">
@@ -202,40 +202,56 @@
         </div>
     </section>
 
-    <!-- EL MÉTODO RARA AVIS -->
+    <!-- SERVICIOS AVANZADOS INCLUIDOS -->
     <section class="py-32 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             
             <div class="text-center mb-24">
-                <span class="text-neon-cyan text-xs uppercase tracking-[0.3em] font-semibold mb-2 block">Proceso Personalizado</span>
-                <h2 class="text-4xl md:text-6xl font-extrabold uppercase tracking-tight font-tech text-white">El Método Rara Avis</h2>
+                <span class="text-neon-cyan text-xs uppercase tracking-[0.3em] font-semibold mb-2 block font-sans-clean">El Método Rara Avis</span>
+                <h2 class="text-4xl md:text-6xl font-normal uppercase tracking-widest font-serif-title text-white">Servicios Avanzados Incluidos</h2>
                 <div class="w-20 h-1 bg-gradient-to-r from-sky-brand to-neon-cyan mx-auto mt-6 rounded-full"></div>
             </div>
 
+            <!-- CUADROS CON TIPOGRAFÍA ELEGANTE SERIF Y CONTENIDO DE TU IMAGEN -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
-                <div class="glass-card-tech p-8 rounded-[2rem] relative" data-aos="fade-up">
-                    <span class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan to-sky-brand block mb-6 font-tech">01.</span>
-                    <h3 class="text-2xl font-bold uppercase tracking-wide text-white mb-4 font-tech">Valoración de Precisión</h3>
-                    <p class="text-slate-300 font-light text-sm leading-relaxed font-sans-clean">
-                        Analizamos las métricas reales del mercado digital para adjudicar a tu propiedad el precio óptimo de salida, maximizando tu rentabilidad desde el primer día.
-                    </p>
+                <!-- Cuadro 1: Nota Simple -->
+                <div class="glass-card-tech p-8 rounded-[2rem] relative flex flex-col justify-between" data-aos="fade-up">
+                    <div>
+                        <div class="text-4xl mb-6">🔑</div>
+                        <h3 class="text-xl md:text-2xl font-normal uppercase tracking-widest text-white mb-4 font-serif-title">
+                            NOTA SIMPLE INFORMATIVA
+                        </h3>
+                        <p class="text-slate-300 font-light text-sm leading-relaxed font-sans-clean">
+                            Solicitamos y verificamos la información registral de tu inmueble para garantizar su estado legal y confirmar la titularidad actual.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="glass-card-tech p-8 rounded-[2rem] relative" data-aos="fade-up" data-aos-delay="200">
-                    <span class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan to-sky-brand block mb-6 font-tech">02.</span>
-                    <h3 class="text-2xl font-bold uppercase tracking-wide text-neon-cyan mb-4 font-tech">Estrategia Boutique</h3>
-                    <p class="text-slate-300 font-light text-sm leading-relaxed font-sans-clean">
-                        Diseñamos un plan de posicionamiento exclusivo para tu inmueble, destacando sus fortalezas técnicas ante los compradores idóneos.
-                    </p>
+                <!-- Cuadro 2: Certificado Energético -->
+                <div class="glass-card-tech p-8 rounded-[2rem] relative flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                    <div>
+                        <div class="text-4xl mb-6">⚡</div>
+                        <h3 class="text-xl md:text-2xl font-normal uppercase tracking-widest text-white mb-4 font-serif-title">
+                            CERTIFICADO DE EFICIENCIA ENERGÉTICA (CEE)
+                        </h3>
+                        <p class="text-slate-300 font-light text-sm leading-relaxed font-sans-clean">
+                            Gestionamos la obtención de tu certificado energético oficial, documento obligatorio por ley para formalizar cualquier operación de compraventa.
+                        </p>
+                    </div>
                 </div>
 
-                <div class="glass-card-tech p-8 rounded-[2rem] relative" data-aos="fade-up" data-aos-delay="400">
-                    <span class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan to-sky-brand block mb-6 font-tech">03.</span>
-                    <h3 class="text-2xl font-bold uppercase tracking-wide text-white mb-4 font-tech">Cierre Digital Fluido</h3>
-                    <p class="text-slate-300 font-light text-sm leading-relaxed font-sans-clean">
-                        Centralizamos y gestionamos de forma telemática toda la documentación legal obligatoria para garantizar una firma de compraventa ágil y sin sobresaltos.
-                    </p>
+                <!-- Cuadro 3: Informe IEE/ITE -->
+                <div class="glass-card-tech p-8 rounded-[2rem] relative flex flex-col justify-between" data-aos="fade-up" data-aos-delay="400">
+                    <div>
+                        <div class="text-4xl mb-6">🏢</div>
+                        <h3 class="text-xl md:text-2xl font-normal uppercase tracking-widest text-white mb-4 font-serif-title">
+                            INFORME DE EVALUACIÓN DEL EDIFICIO (IEE/ITE)
+                        </h3>
+                        <p class="text-slate-300 font-light text-sm leading-relaxed font-sans-clean">
+                            Supervisamos el estado legal y técnico de la edificación mediante la ITE para asegurar que el inmueble cumple con la normativa vigente.
+                        </p>
+                    </div>
                 </div>
 
             </div>
@@ -253,64 +269,17 @@
                     </div>
                     
                     <div class="md:col-span-6 p-2 text-center md:text-left">
-                        <span class="text-neon-cyan font-bold uppercase tracking-[0.3em] text-xs mb-3 block">Compromiso Rara Avis</span>
-                        <h3 class="text-3xl md:text-5xl font-extrabold uppercase text-white tracking-tight leading-tight mb-6 font-tech">
-                            Tu tranquilidad legal <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan to-cyan-brand">es nuestra prioridad.</span>
-                        </h3>
+                        <span class="text-neon-cyan font-bold uppercase tracking-[0.3em] text-xs mb-3 block font-sans-clean">Compromiso Rara Avis</span>
+                        <h2 class="text-3xl md:text-5xl font-normal uppercase text-white tracking-wider leading-tight mb-6 font-serif-title">
+                            Tu tranquilidad legal <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan to-cyan-brand italic">es nuestra prioridad.</span>
+                        </h2>
                         <p class="text-slate-300 font-light text-sm leading-relaxed font-sans-clean">
-                            Nos encargamos de proteger tu operación de principio a fin, asegurando que cada trámite digital cumpla strictly con los mayores estándares del sector.
+                            Nos encargamos de proteger tu operación de principio a fin, asegurando que cada trámite digital cumpla estrictamente con los mayores estándares del sector.
                         </p>
                     </div>
                 </div>
 
             </div>
-        </div>
-    </section>
-
-    <!-- SERVICIOS AVANZADOS -->
-    <section id="servicios" class="py-32 border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-6">
-            
-            <div class="text-center mb-24">
-                <span class="text-neon-cyan text-xs uppercase tracking-[0.3em] font-semibold mb-2 block">Garantía Técnica</span>
-                <h2 class="text-4xl md:text-6xl font-extrabold uppercase tracking-tight font-tech text-white">Servicios Avanzados Incluidos</h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-sky-brand to-neon-cyan mx-auto mt-6 rounded-full"></div>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                <div class="glass-card-tech p-10 rounded-[2rem] flex flex-col justify-between" data-aos="fade-up">
-                    <div>
-                        <div class="w-14 h-14 rounded-2xl bg-cyan-brand/10 border border-cyan-brand/30 flex items-center justify-center text-neon-cyan text-2xl font-bold mb-6">01</div>
-                        <h3 class="text-2xl font-bold mb-4 uppercase tracking-wide text-white font-tech">Nota Simple Informativa</h3>
-                        <p class="text-slate-300 text-sm leading-relaxed font-light font-sans-clean">
-                            Solicitamos y verificamos la información registral de tu inmueble para garantizar su estado legal y confirmar la titularidad actual.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="glass-card-tech p-10 rounded-[2rem] flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
-                    <div>
-                        <div class="w-14 h-14 rounded-2xl bg-cyan-brand/10 border border-cyan-brand/30 flex items-center justify-center text-neon-cyan text-2xl font-bold mb-6">02</div>
-                        <h3 class="text-2xl font-bold mb-4 uppercase tracking-wide text-white font-tech">Certificado de Eficiencia Energética (CEE)</h3>
-                        <p class="text-slate-300 text-sm leading-relaxed font-light font-sans-clean">
-                            Gestionamos la obtención de tu certificado energético oficial, documento obligatorio por ley para formalizar cualquier operación de compraventa.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="glass-card-tech p-10 rounded-[2rem] flex flex-col justify-between" data-aos="fade-up" data-aos-delay="400">
-                    <div>
-                        <div class="w-14 h-14 rounded-2xl bg-cyan-brand/10 border border-cyan-brand/30 flex items-center justify-center text-neon-cyan text-2xl font-bold mb-6">03</div>
-                        <h3 class="text-2xl font-bold mb-4 uppercase tracking-wide text-white font-tech">Informe de Evaluación del Edificio (IEE/ITE)</h3>
-                        <p class="text-slate-300 text-sm leading-relaxed font-light font-sans-clean">
-                            Supervisamos el estado legal y técnico de la edificación mediante la ITE para asegurar que el inmueble cumple con la normativa vigente.
-                        </p>
-                    </div>
-                </div>
-
-            </div>
-
         </div>
     </section>
 
@@ -319,8 +288,8 @@
         <div class="max-w-4xl mx-auto px-6 relative z-10">
             <div class="glass-card-tech p-10 md:p-16 rounded-[2.5rem] text-center border border-neon-cyan/20">
                 
-                <h2 class="text-4xl md:text-6xl font-extrabold mb-3 uppercase tracking-tight font-tech text-white">¿Hablamos hoy?</h2>
-                <p class="text-neon-cyan text-xs uppercase tracking-[0.3em] mb-14 font-semibold">Asesoramiento Exclusivo a un Clic</p>
+                <h2 class="text-4xl md:text-6xl font-normal mb-3 uppercase tracking-widest font-serif-title text-white">¿Hablamos hoy?</h2>
+                <p class="text-neon-cyan text-xs uppercase tracking-[0.3em] mb-14 font-semibold font-sans-clean">Asesoramiento Exclusivo a un Clic</p>
                 
                 <form action="https://api.web3forms.com/submit" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left font-sans-clean">
                     
