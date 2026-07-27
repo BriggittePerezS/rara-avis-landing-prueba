@@ -6,8 +6,7 @@
     <title>Rara Avis Homes | Tu Boutique Inmobiliaria Online</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Tipografía Elegante Serif (Cinzel) aplicada globalmente a la web -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <script>
@@ -37,22 +36,10 @@
             margin: 0;
         }
 
-        /* Degradado corporativo original */
         .nav-exact-gradient {
             background: linear-gradient(to bottom, #29b1ec 0%, #51c6f3 100%);
         }
 
-        /* Alineación central absoluta para la navbar */
-        @media (min-width: 768px) {
-            .nav-center-title {
-                position: absolute;
-                left: 50%;
-                top: 50%;
-                transform: translate(-50%, -50%);
-            }
-        }
-
-        /* Botones estilo Tech Glow */
         .btn-tech-glow {
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             letter-spacing: 0.15em;
@@ -64,18 +51,21 @@
             box-shadow: 0 0 25px rgba(0, 255, 255, 0.6), 0 0 10px rgba(41, 177, 236, 0.8);
         }
 
-        .btn-premium {
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            font-family: 'Montserrat', sans-serif;
+        /* Estilo mejorado para el botón secundario en la barra azul con alta legibilidad */
+        .btn-nav-outline-contrast {
+            background: rgba(2, 6, 23, 0.45);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            color: #ffffff;
+            font-weight: 700;
         }
 
-        .btn-premium:hover {
-            transform: scale(1.05) translateY(-1px);
-            box-shadow: 0 10px 25px rgba(255, 255, 255, 0.25);
-            opacity: 0.95;
+        .btn-nav-outline-contrast:hover {
+            background: rgba(2, 6, 23, 0.7);
+            border-color: #00ffff;
+            color: #00ffff;
         }
 
-        /* Tarjetas de cristal cyber-tech */
         .glass-card-tech {
             background: rgba(15, 23, 42, 0.6);
             backdrop-filter: blur(16px);
@@ -88,65 +78,64 @@
             box-shadow: 0 10px 35px -10px rgba(0, 255, 255, 0.15);
         }
 
-        /* Fondo dinámico */
         .bg-tech-grid {
             background-image: radial-gradient(rgba(41, 177, 236, 0.1) 1px, transparent 1px);
             background-size: 30px 30px;
+        }
+
+        @media (max-height: 500px) and (orientation: landscape) {
+            .nav-responsive-h { height: 3.5rem !important; }
+            .logo-responsive-h { width: 2.5rem !important; height: 2.5rem !important; }
+            .hero-responsive-pt { padding-top: 5rem !important; }
         }
     </style>
 </head>
 <body class="selection:bg-neon-cyan selection:text-dark-bg bg-dark-bg text-slate-200 bg-tech-grid font-serif-title">
 
-    <!-- NAVBAR CON DEGRADADO ORIGINAL -->
-    <nav class="fixed w-full z-[100] nav-exact-gradient shadow-2xl h-24 flex items-center justify-between px-4 md:px-12">
-        
-        <div class="flex items-center justify-center w-24 h-24 md:w-28 md:h-28 flex-shrink-0 ml-4 md:ml-12 overflow-hidden">
-            <img src="img/logo.png" alt="Rara Avis Homes Logo" class="w-full h-full object-contain scale-110">
+    <!-- NAVBAR -->
+    <nav class="fixed w-full z-[100] nav-exact-gradient shadow-2xl h-20 sm:h-24 px-4 sm:px-8 md:px-12 flex items-center justify-between nav-responsive-h">
+        <div class="flex items-center justify-start w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex-shrink-0 logo-responsive-h">
+            <img src="img/logo.png" alt="Rara Avis Homes Logo" class="w-full h-full object-contain scale-105">
         </div>
 
-        <div class="nav-center-title flex flex-col items-center justify-center text-center">
-            <span class="text-white text-2xl md:text-4xl font-normal tracking-[0.2em] uppercase leading-none font-serif-title">
+        <div class="flex flex-col items-center justify-center text-center px-2 min-w-0">
+            <span class="text-white text-base sm:text-2xl md:text-3xl font-normal tracking-[0.2em] uppercase leading-none font-serif-title truncate">
                 RARA AVIS
             </span>
-            <span class="text-white/90 text-[10px] md:text-xs font-normal tracking-[0.4em] lowercase mt-1 font-serif-title italic">
+            <span class="text-white/90 text-[9px] sm:text-xs font-normal tracking-[0.35em] lowercase mt-1 font-serif-title italic">
                 homes
             </span>
         </div>
 
-        <div class="flex items-center gap-3 flex-shrink-0">
-            <a href="villas.html" class="hidden sm:inline-block bg-slate-950/50 text-white hover:bg-slate-950/80 border border-white/20 px-4 py-3 rounded-xl font-bold text-[10px] md:text-xs btn-premium uppercase tracking-widest transition-all">
+        <div class="flex items-center gap-2 sm:gap-4 flex-shrink-0">
+            <a href="villas.html" class="hidden sm:inline-flex items-center justify-center btn-nav-outline-contrast text-xs px-5 py-2.5 rounded-full uppercase tracking-widest btn-tech-glow">
                 VILLAS JÁVEA
             </a>
-            <a href="https://wa.me/34641984686?text=%C2%A1Hola%21+Me+pongo+en+contacto+con+Rara+Avis+Homes+para+solicitar+una+consulta" target="_blank" class="bg-white text-[#020617] px-5 py-3 rounded-xl font-black text-[10px] md:text-xs btn-premium uppercase tracking-widest block text-center shadow-lg">
+            <a href="https://wa.me/34641984686?text=%C2%A1Hola%21+Me+pongo+en+contacto+con+Rara+Avis+Homes+para+solicitar+una+consulta" target="_blank" class="bg-gradient-to-r from-sky-brand to-neon-cyan text-dark-bg px-5 py-2.5 rounded-full font-black text-xs btn-tech-glow uppercase tracking-widest block text-center shadow-lg whitespace-nowrap">
                 CONSULTA DIRECTA
             </a>
         </div>
     </nav>
 
     <!-- HERO SECTION -->
-    <section class="relative min-h-screen flex items-center justify-center pt-28 overflow-hidden">
-        
-        <!-- Esferas luminosas de fondo -->
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-sky-brand/20 blur-[140px] rounded-full pointer-events-none"></div>
-        <div class="absolute top-1/3 right-10 w-[300px] h-[300px] bg-neon-cyan/15 blur-[120px] rounded-full pointer-events-none"></div>
+    <section class="relative min-h-screen flex items-center justify-center pt-28 pb-12 hero-responsive-pt overflow-hidden">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[500px] h-[300px] sm:h-[500px] bg-sky-brand/20 blur-[140px] rounded-full pointer-events-none"></div>
+        <div class="absolute top-1/3 right-10 w-[200px] sm:w-[300px] h-[200px] sm:h-[300px] bg-neon-cyan/15 blur-[120px] rounded-full pointer-events-none"></div>
 
         <div class="max-w-5xl mx-auto px-6 text-center z-10">
             
-            <!-- TÍTULO PRINCIPAL EXACTO A TU IMAGEN -->
-            <h1 class="text-3xl sm:text-5xl md:text-[68px] font-normal leading-[1.25] tracking-widest uppercase mb-8 text-white font-serif-title" data-aos="fade-up">
+            <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-[70px] font-normal leading-[1.2] sm:leading-[1.25] tracking-widest uppercase mb-6 sm:mb-8 text-white font-serif-title" data-aos="fade-up">
                 RARA AVIS HOMES<br>
                 <span class="text-neon-cyan font-normal drop-shadow-[0_0_15px_rgba(0,255,255,0.4)]">TU BOUTIQUE</span> 
                 <span class="italic text-slate-100 font-light">INMOBILIARIA</span><br>
                 <span class="italic text-slate-100 font-light">ONLINE</span>
             </h1>
             
-            <p class="text-base md:text-xl font-light text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed font-sans-clean" data-aos="fade-up" data-aos-delay="200">
+            <p class="text-sm sm:text-base md:text-xl font-light text-slate-300 max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed font-sans-clean" data-aos="fade-up" data-aos-delay="200">
                 Vender tu casa, <span class="text-neon-cyan font-semibold underline decoration-sky-brand underline-offset-8">sin límites</span> y sin complicaciones.
             </p>
             
-            <!-- CONTENEDOR DE BOTONES Y PÍLDORA ABAJO -->
-            <div class="flex flex-col items-center gap-6" data-aos="zoom-in" data-aos-delay="400">
-                
+            <div class="flex flex-col items-center gap-5 sm:gap-6" data-aos="zoom-in" data-aos-delay="400">
                 <div class="flex flex-col sm:flex-row justify-center items-center gap-4 w-full sm:w-auto">
                     <a href="#contacto" class="bg-gradient-to-r from-sky-brand to-neon-cyan text-dark-bg font-black text-xs md:text-sm px-8 py-3.5 rounded-full btn-tech-glow uppercase shadow-lg w-full sm:w-auto text-center transition-all">
                         VALORACIÓN GRATIS
@@ -156,29 +145,20 @@
                     </a>
                 </div>
 
-                <!-- Píldora Ubicada Abajo -->
-                <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-neon-cyan/30 bg-slate-900/80 backdrop-blur-md shadow-lg">
-                    <span class="w-2 h-2 rounded-full bg-neon-cyan animate-pulse"></span>
-                    <span class="text-neon-cyan text-[11px] md:text-xs uppercase tracking-[0.25em] font-semibold font-sans-clean">
-                        SELECCIÓN EXCLUSIVA & ATENCIÓN PERSONALIZADA
-                    </span>
+                <div class="flex items-center justify-center gap-2 text-[10px] sm:text-xs text-slate-400 tracking-[0.25em] uppercase font-sans-clean mt-2">
+                    <span class="text-neon-cyan text-sm">▪</span> SELECCIÓN EXCLUSIVA & ATENCIÓN PERSONALIZADA
                 </div>
-
             </div>
-
         </div>
     </section>
 
     <!-- SECCIÓN SOBRE MÍ -->
-    <section class="py-28 relative">
+    <section class="py-20 sm:py-28 relative">
         <div class="max-w-6xl mx-auto px-6">
-            
-            <div class="glass-card-tech p-8 md:p-16 rounded-[2.5rem] relative overflow-hidden" data-aos="fade-up">
-                
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center relative z-10">
-                    
+            <div class="glass-card-tech p-6 sm:p-8 md:p-16 rounded-[2.5rem] relative overflow-hidden" data-aos="fade-up">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center relative z-10">
                     <div class="md:col-span-7 text-center md:text-left">
-                        <div class="mb-8">
+                        <div class="mb-6 sm:mb-8">
                             <span class="text-neon-cyan font-bold tracking-[0.3em] text-xs uppercase mb-2 block font-sans-clean">Sobre Mí</span>
                             <h2 class="text-3xl md:text-5xl font-normal uppercase text-white tracking-widest font-serif-title">Experiencia Exclusiva</h2>
                         </div>
@@ -192,30 +172,28 @@
 
                     <div class="md:col-span-5 w-full flex justify-center">
                         <div class="glass-card-tech p-2 rounded-[2rem] overflow-hidden w-full max-w-sm group border border-neon-cyan/30">
-                            <img src="img/ana1.jpeg" alt="Ana María - Rara Avis Homes" class="w-full h-[450px] object-contain rounded-[1.5rem] group-hover:scale-105 transition-transform duration-500">
+                            <img src="img/ana1.jpeg" alt="Ana María - Rara Avis Homes" class="w-full h-[380px] sm:h-[450px] object-contain rounded-[1.5rem] group-hover:scale-105 transition-transform duration-500">
                         </div>
                     </div>
-
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- SERVICIOS AVANZADOS INCLUIDOS -->
-    <section class="py-32 relative overflow-hidden">
+    <!-- SECCIÓN: EL MÉTODO RARA AVIS -->
+    <section class="py-20 sm:py-28 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 relative z-10">
-            
-            <div class="text-center mb-24">
-                <span class="text-neon-cyan text-xs uppercase tracking-[0.3em] font-semibold mb-2 block font-sans-clean">El Método Rara Avis</span>
-                <h2 class="text-4xl md:text-6xl font-normal uppercase tracking-widest font-serif-title text-white">Servicios Avanzados Incluidos</h2>
-                <div class="w-20 h-1 bg-gradient-to-r from-sky-brand to-neon-cyan mx-auto mt-6 rounded-full"></div>
+            <div class="text-center mb-16 sm:mb-20" data-aos="fade-up">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-normal uppercase tracking-[0.2em] font-serif-title text-white">
+                    EL MÉTODO <span class="italic text-slate-100 font-light">RARA AVIS</span>
+                </h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-sky-brand to-neon-cyan mx-auto mt-5 rounded-full"></div>
+                <span class="text-neon-cyan text-[11px] sm:text-xs uppercase tracking-[0.3em] font-medium font-sans-clean mt-6 block">
+                    SERVICIOS AVANZADOS INCLUIDOS
+                </span>
             </div>
 
-            <!-- CUADROS CON TIPOGRAFÍA ELEGANTE SERIF Y CONTENIDO DE TU IMAGEN -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                <!-- Cuadro 1: Nota Simple -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
                 <div class="glass-card-tech p-8 rounded-[2rem] relative flex flex-col justify-between" data-aos="fade-up">
                     <div>
                         <div class="text-4xl mb-6">🔑</div>
@@ -228,7 +206,6 @@
                     </div>
                 </div>
 
-                <!-- Cuadro 2: Certificado Energético -->
                 <div class="glass-card-tech p-8 rounded-[2rem] relative flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
                     <div>
                         <div class="text-4xl mb-6">⚡</div>
@@ -241,7 +218,6 @@
                     </div>
                 </div>
 
-                <!-- Cuadro 3: Informe IEE/ITE -->
                 <div class="glass-card-tech p-8 rounded-[2rem] relative flex flex-col justify-between" data-aos="fade-up" data-aos-delay="400">
                     <div>
                         <div class="text-4xl mb-6">🏢</div>
@@ -253,19 +229,17 @@
                         </p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- COMPROMISO RARA AVIS -->
-    <section class="py-24 relative overflow-hidden">
+    <section class="py-20 sm:py-24 relative overflow-hidden">
         <div class="max-w-5xl mx-auto px-6">
-            <div class="glass-card-tech p-8 md:p-12 rounded-[2.5rem] overflow-hidden shadow-2xl relative" data-aos="zoom-in">
-                
+            <div class="glass-card-tech p-6 sm:p-8 md:p-12 rounded-[2.5rem] overflow-hidden shadow-2xl relative" data-aos="zoom-in">
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                     <div class="md:col-span-6 w-full flex justify-center">
-                        <img src="img/ana2.jpeg" alt="Ana María - Tu tranquilidad legal" class="w-full h-[360px] object-contain rounded-[1.5rem]">
+                        <img src="img/ana2.jpeg" alt="Ana María - Tu tranquilidad legal" class="w-full h-[300px] sm:h-[360px] object-contain rounded-[1.5rem]">
                     </div>
                     
                     <div class="md:col-span-6 p-2 text-center md:text-left">
@@ -278,21 +252,18 @@
                         </p>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- FORMULARIO DE CONTACTO -->
-    <section id="contacto" class="py-32 relative overflow-hidden">
+    <section id="contacto" class="py-20 sm:py-32 relative overflow-hidden">
         <div class="max-w-4xl mx-auto px-6 relative z-10">
-            <div class="glass-card-tech p-10 md:p-16 rounded-[2.5rem] text-center border border-neon-cyan/20">
-                
-                <h2 class="text-4xl md:text-6xl font-normal mb-3 uppercase tracking-widest font-serif-title text-white">¿Hablamos hoy?</h2>
-                <p class="text-neon-cyan text-xs uppercase tracking-[0.3em] mb-14 font-semibold font-sans-clean">Asesoramiento Exclusivo a un Clic</p>
+            <div class="glass-card-tech p-8 sm:p-10 md:p-16 rounded-[2.5rem] text-center border border-neon-cyan/20">
+                <h2 class="text-3xl sm:text-4xl md:text-6xl font-normal mb-3 uppercase tracking-widest font-serif-title text-white">¿Hablamos hoy?</h2>
+                <p class="text-neon-cyan text-xs uppercase tracking-[0.3em] mb-10 sm:mb-14 font-semibold font-sans-clean">Asesoramiento Exclusivo a un Clic</p>
                 
                 <form action="https://api.web3forms.com/submit" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left font-sans-clean">
-                    
                     <input type="hidden" name="access_key" value="6ee05328-7787-401b-9229-ea62fe657fd4">
 
                     <div class="flex flex-col gap-2">
@@ -327,11 +298,10 @@
                         </label>
                     </div>
                     
-                    <button type="submit" class="md:col-span-2 mt-6 bg-gradient-to-r from-sky-brand to-neon-cyan text-dark-bg py-4 rounded-xl font-black tracking-[0.25em] uppercase text-xs btn-tech-glow shadow-xl w-full text-center transition-all">
+                    <button type="submit" class="md:col-span-2 mt-6 bg-gradient-to-r from-sky-brand to-neon-cyan text-dark-bg py-4 rounded-full font-black tracking-[0.25em] uppercase text-xs btn-tech-glow shadow-xl w-full text-center transition-all">
                         ENVIAR SOLICITUD
                     </button>
                 </form>
-
             </div>
         </div>
     </section>
@@ -339,7 +309,6 @@
     <!-- FOOTER -->
     <footer class="py-16 bg-slate-950 border-t border-white/5 text-center text-slate-500 font-light tracking-wider font-sans-clean">
         <div class="max-w-6xl mx-auto px-6 flex flex-col items-center gap-6">
-            
             <div class="flex flex-wrap justify-center gap-x-8 gap-y-3 text-xs uppercase tracking-[0.2em]">
                 <a href="aviso-legal.html" class="hover:text-neon-cyan transition-colors duration-200">Aviso Legal</a>
                 <a href="politica-privacidad.html" class="hover:text-neon-cyan transition-colors duration-200">Política de Privacidad</a>
