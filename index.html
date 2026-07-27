@@ -6,7 +6,8 @@
     <title>Rara Avis Homes | Tu Boutique Inmobiliaria Online</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <!-- Tipografía Outfit (Moderna, Geométrica, Vanguardista) + Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800&family=Montserrat:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <script>
@@ -16,21 +17,27 @@
                     colors: {
                         'dark-bg': '#020617',
                         'neon-cyan': '#00ffff',
+                        'sky-brand': '#29b1ec',
+                        'cyan-brand': '#51c6f3',
+                    },
+                    fontFamily: {
+                        'tech': ['Outfit', 'sans-serif'],
+                        'sans-clean': ['Montserrat', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
-    // c 
+
     <style>
         body { 
-            font-family: 'Montserrat', sans-serif; 
+            font-family: 'Outfit', sans-serif; 
             background-color: #020617;
-            color: white;
+            color: #f1f5f9;
             margin: 0;
         }
 
-        /* Degradado corporativo premium para la barra de navegación */
+        /* Degradado corporativo original */
         .nav-exact-gradient {
             background: linear-gradient(to bottom, #29b1ec 0%, #51c6f3 100%);
         }
@@ -45,6 +52,17 @@
             }
         }
 
+        /* Botones estilo Tech Glow */
+        .btn-tech-glow {
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            letter-spacing: 0.15em;
+        }
+
+        .btn-tech-glow:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 0 25px rgba(0, 255, 255, 0.6), 0 0 10px rgba(41, 177, 236, 0.8);
+        }
+
         .btn-premium {
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
@@ -55,19 +73,29 @@
             opacity: 0.95;
         }
 
-        .glass-card {
-            background: rgba(255, 255, 255, 0.02);
+        /* Tarjetas de cristal cyber-tech */
+        .glass-card-tech {
+            background: rgba(15, 23, 42, 0.6);
             backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.07);
+            border: 1px solid rgba(81, 198, 243, 0.15);
+            transition: all 0.4s ease;
         }
 
-        .bg-glow {
-            background: radial-gradient(circle at 50% 40%, rgba(41, 177, 236, 0.15) 0%, rgba(2, 6, 23, 0) 70%);
+        .glass-card-tech:hover {
+            border-color: rgba(0, 255, 255, 0.4);
+            box-shadow: 0 10px 35px -10px rgba(0, 255, 255, 0.15);
+        }
+
+        /* Fondo dinámico tech */
+        .bg-tech-grid {
+            background-image: radial-gradient(rgba(41, 177, 236, 0.1) 1px, transparent 1px);
+            background-size: 30px 30px;
         }
     </style>
 </head>
-<body class="selection:bg-neon-cyan selection:text-dark-bg">
+<body class="selection:bg-neon-cyan selection:text-dark-bg bg-dark-bg text-slate-200 bg-tech-grid">
 
+    <!-- NAVBAR CON DEGRADADO ORIGINAL -->
     <nav class="fixed w-full z-[100] nav-exact-gradient shadow-2xl h-24 flex items-center justify-between px-4 md:px-12">
         
         <div class="flex items-center justify-center w-24 h-24 md:w-28 md:h-28 flex-shrink-0 ml-4 md:ml-12 overflow-hidden">
@@ -75,16 +103,16 @@
         </div>
 
         <div class="nav-center-title flex flex-col items-center justify-center text-center">
-            <span class="text-white text-xl md:text-3xl font-light tracking-[0.25em] uppercase leading-none">
+            <span class="text-white text-2xl md:text-4xl font-extrabold tracking-[0.25em] uppercase leading-none font-tech">
                 Rara Avis
             </span>
-            <span class="text-white/70 text-[10px] md:text-sm font-normal tracking-[0.45em] lowercase mt-1.5">
+            <span class="text-white/90 text-[10px] md:text-xs font-medium tracking-[0.5em] lowercase mt-1 font-sans-clean">
                 homes
             </span>
         </div>
 
         <div class="flex items-center gap-3 flex-shrink-0">
-            <a href="villas.html" class="hidden sm:inline-block bg-slate-950/40 text-white hover:bg-slate-950/70 border border-white/20 px-4 py-3 rounded-xl font-bold text-[10px] md:text-xs btn-premium uppercase tracking-widest transition-all">
+            <a href="villas.html" class="hidden sm:inline-block bg-slate-950/50 text-white hover:bg-slate-950/80 border border-white/20 px-4 py-3 rounded-xl font-bold text-[10px] md:text-xs btn-premium uppercase tracking-widest transition-all">
                 VILLAS JÁVEA
             </a>
             <a href="https://wa.me/34641984686?text=%C2%A1Hola%21+Me+pongo+en+contacto+con+Rara+Avis+Homes+para+solicitar+una+consulta" target="_blank" class="bg-white text-[#020617] px-5 py-3 rounded-xl font-black text-[10px] md:text-xs btn-premium uppercase tracking-widest block text-center shadow-lg">
@@ -93,54 +121,74 @@
         </div>
     </nav>
 
-    <section class="relative min-h-screen flex items-center justify-center pt-28 bg-glow overflow-hidden">
+    <!-- HERO SECTION VANGUARDISTA -->
+    <section class="relative min-h-screen flex items-center justify-center pt-28 overflow-hidden">
+        
+        <!-- Esferas luminosas de fondo -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-sky-brand/20 blur-[140px] rounded-full pointer-events-none"></div>
+        <div class="absolute top-1/3 right-10 w-[300px] h-[300px] bg-neon-cyan/15 blur-[120px] rounded-full pointer-events-none"></div>
+
         <div class="max-w-5xl mx-auto px-6 text-center z-10">
             
-            <h1 class="text-4xl md:text-[76px] font-black leading-[1.05] tracking-tighter uppercase mb-6" data-aos="fade-up">
+            <h1 class="text-4xl md:text-[76px] font-extrabold leading-[1.05] tracking-tight uppercase mb-8 text-white font-tech" data-aos="fade-up">
                 RARA AVIS HOMES<br>
-                <span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-sky-300">TU BOUTIQUE</span> <span class="text-neon-cyan">INMOBILIARIA ONLINE</span>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan via-cyan-brand to-sky-brand">TU BOUTIQUE</span> <span class="text-white font-light">INMOBILIARIA ONLINE</span>
             </h1>
             
-            <p class="text-lg md:text-2xl font-light text-slate-300 max-w-3xl mx-auto mb-12 leading-relaxed" data-aos="fade-up" data-aos-delay="200">
-                Vender tu casa, <span class="text-white font-semibold underline decoration-neon-cyan underline-offset-8">sin límites</span> y sin complicaciones.
+            <p class="text-base md:text-xl font-light text-slate-300 max-w-2xl mx-auto mb-10 leading-relaxed font-sans-clean" data-aos="fade-up" data-aos-delay="200">
+                Vender tu casa, <span class="text-neon-cyan font-semibold underline decoration-sky-brand underline-offset-8">sin límites</span> y sin complicaciones.
             </p>
             
-            <div class="flex flex-col sm:flex-row justify-center items-center gap-4" data-aos="zoom-in" data-aos-delay="400">
-                <a href="#contacto" class="bg-white text-[#020617] px-10 py-5 rounded-xl font-black text-base md:text-lg btn-premium uppercase tracking-[0.2em] shadow-xl w-full sm:w-auto text-center">
-                    VALORACIÓN GRATIS
-                </a>
-                <a href="villas.html" class="bg-gradient-to-r from-sky-400 to-cyan-400 text-dark-bg px-10 py-5 rounded-xl font-black text-base md:text-lg btn-premium uppercase tracking-[0.2em] shadow-xl w-full sm:w-auto text-center">
-                    VER VILLAS EN JÁVEA →
-                </a>
+            <!-- CONTENEDOR DE BOTONES Y PÍLDORA -->
+            <div class="flex flex-col items-center gap-6" data-aos="zoom-in" data-aos-delay="400">
+                
+                <!-- Los 2 botones estilo cápsula -->
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 w-full sm:w-auto">
+                    <a href="#contacto" class="bg-gradient-to-r from-sky-brand to-neon-cyan text-dark-bg font-black text-xs md:text-sm px-8 py-3.5 rounded-full btn-tech-glow uppercase shadow-lg w-full sm:w-auto text-center transition-all">
+                        VALORACIÓN GRATIS
+                    </a>
+                    <a href="villas.html" class="inline-flex items-center justify-center gap-2 border border-neon-cyan/40 bg-neon-cyan/10 hover:bg-neon-cyan/20 text-neon-cyan font-bold text-xs md:text-sm px-8 py-3.5 rounded-full uppercase tracking-widest w-full sm:w-auto text-center transition-all btn-tech-glow">
+                        VER VILLAS EN JÁVEA →
+                    </a>
+                </div>
+
+                <!-- Píldora Ubicada Abajo -->
+                <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-neon-cyan/30 bg-slate-900/80 backdrop-blur-md shadow-lg">
+                    <span class="w-2 h-2 rounded-full bg-neon-cyan animate-pulse"></span>
+                    <span class="text-neon-cyan text-[11px] md:text-xs uppercase tracking-[0.25em] font-semibold">
+                        SELECCIÓN EXCLUSIVA & ATENCIÓN PERSONALIZADA
+                    </span>
+                </div>
+
             </div>
 
         </div>
     </section>
 
-    <section class="py-28 bg-slate-950/40 border-b border-white/5 relative">
+    <!-- SECCIÓN SOBRE MÍ -->
+    <section class="py-28 relative">
         <div class="max-w-6xl mx-auto px-6">
             
-            <div class="glass-card p-8 md:p-12 rounded-[2.5rem] shadow-2xl relative overflow-hidden" data-aos="fade-up">
-                <div class="absolute -top-12 -right-12 w-40 h-40 bg-cyan-500/10 blur-3xl rounded-full"></div>
+            <div class="glass-card-tech p-8 md:p-16 rounded-[2.5rem] relative overflow-hidden" data-aos="fade-up">
                 
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center relative z-10">
                     
                     <div class="md:col-span-7 text-center md:text-left">
-                        <div class="mb-6">
-                            <h4 class="text-neon-cyan font-bold tracking-widest text-xs uppercase mb-1">Sobre Mí</h4>
-                            <h3 class="text-2xl font-black uppercase text-white tracking-tight">Experiencia Exclusiva</h3>
+                        <div class="mb-8">
+                            <span class="text-neon-cyan font-bold tracking-[0.3em] text-xs uppercase mb-2 block">Sobre Mí</span>
+                            <h3 class="text-3xl md:text-5xl font-extrabold uppercase text-white tracking-tight font-tech">Experiencia Exclusiva</h3>
                         </div>
                         
-                        <p class="text-sm md:text-base font-light text-slate-200 leading-relaxed">
-                            Hola, soy Ana María, fundadora de Rara Avis Homes.<br class="mb-2">
-                            Mi misión es transformar la venta de tu vivienda en un proceso exclusivo, digital y libre de estrés.<br class="mb-2">
+                        <p class="text-sm md:text-base font-light text-slate-300 leading-relaxed font-sans-clean">
+                            Hola, soy Ana María, fundadora de Rara Avis Homes.<br class="mb-3">
+                            Mi misión es transformar la venta de tu vivienda en un proceso exclusivo, digital y libre de estrés.<br class="mb-3">
                             Nos encargamos de toda la gestión legal y administrativa, actuando como tu filtro y protección, para que disfrutes de una transacción impecable y sin complicaciones.
                         </p>
                     </div>
 
                     <div class="md:col-span-5 w-full flex justify-center">
-                        <div class="glass-card p-2 rounded-[2rem] overflow-hidden shadow-xl w-full max-w-sm group bg-slate-950/40">
-                            <img src="img/ana1.jpeg" alt="Ana María - Rara Avis Homes" class="w-full h-[450px] object-contain rounded-[1.5rem] group-hover:scale-[1.02] transition-transform duration-500">
+                        <div class="glass-card-tech p-2 rounded-[2rem] overflow-hidden w-full max-w-sm group border border-neon-cyan/30">
+                            <img src="img/ana1.jpeg" alt="Ana María - Rara Avis Homes" class="w-full h-[450px] object-contain rounded-[1.5rem] group-hover:scale-105 transition-transform duration-500">
                         </div>
                     </div>
 
@@ -150,56 +198,62 @@
         </div>
     </section>
 
-    <section class="py-28 bg-dark-bg relative overflow-hidden">
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-sky-500/[0.02] blur-[150px] rounded-full pointer-events-none"></div>
-        
+    <!-- EL MÉTODO RARA AVIS -->
+    <section class="py-32 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="text-center mb-20">
-                <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter">El Método Rara Avis</h2>
-                <div class="w-16 h-1 bg-neon-cyan mx-auto mt-4 rounded-full"></div>
+            
+            <div class="text-center mb-24">
+                <span class="text-neon-cyan text-xs uppercase tracking-[0.3em] font-semibold mb-2 block">Proceso Personalizado</span>
+                <h2 class="text-4xl md:text-6xl font-extrabold uppercase tracking-tight font-tech text-white">El Método Rara Avis</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-sky-brand to-neon-cyan mx-auto mt-6 rounded-full"></div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
-                <div class="relative px-4" data-aos="fade-right">
-                    <div class="text-7xl font-black text-white/5 absolute -top-10 left-0 md:left-4 select-none">01</div>
-                    <h3 class="text-lg font-bold uppercase tracking-wider text-neon-cyan mb-3 relative z-10">Valoración de Precisión</h3>
-                    <p class="text-slate-200 font-light text-sm leading-relaxed">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <div class="glass-card-tech p-8 rounded-[2rem] relative" data-aos="fade-up">
+                    <span class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan to-sky-brand block mb-6 font-tech">01.</span>
+                    <h3 class="text-2xl font-bold uppercase tracking-wide text-white mb-4 font-tech">Valoración de Precisión</h3>
+                    <p class="text-slate-300 font-light text-sm leading-relaxed font-sans-clean">
                         Analizamos las métricas reales del mercado digital para adjudicar a tu propiedad el precio óptimo de salida, maximizando tu rentabilidad desde el primer día.
                     </p>
                 </div>
-                <div class="relative px-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="text-7xl font-black text-white/5 absolute -top-10 left-0 md:left-4 select-none">02</div>
-                    <h3 class="text-lg font-bold uppercase tracking-wider text-sky-400 mb-3 relative z-10">Estrategia Boutique</h3>
-                    <p class="text-slate-200 font-light text-sm leading-relaxed">
+
+                <div class="glass-card-tech p-8 rounded-[2rem] relative" data-aos="fade-up" data-aos-delay="200">
+                    <span class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan to-sky-brand block mb-6 font-tech">02.</span>
+                    <h3 class="text-2xl font-bold uppercase tracking-wide text-neon-cyan mb-4 font-tech">Estrategia Boutique</h3>
+                    <p class="text-slate-300 font-light text-sm leading-relaxed font-sans-clean">
                         Diseñamos un plan de posicionamiento exclusivo para tu inmueble, destacando sus fortalezas técnicas ante los compradores idóneos.
                     </p>
                 </div>
-                <div class="relative px-4" data-aos="fade-left" data-aos-delay="400">
-                    <div class="text-7xl font-black text-white/5 absolute -top-10 left-0 md:left-4 select-none">03</div>
-                    <h3 class="text-lg font-bold uppercase tracking-wider text-white mb-3 relative z-10">Cierre Digital Fluido</h3>
-                    <p class="text-slate-200 font-light text-sm leading-relaxed">
+
+                <div class="glass-card-tech p-8 rounded-[2rem] relative" data-aos="fade-up" data-aos-delay="400">
+                    <span class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan to-sky-brand block mb-6 font-tech">03.</span>
+                    <h3 class="text-2xl font-bold uppercase tracking-wide text-white mb-4 font-tech">Cierre Digital Fluido</h3>
+                    <p class="text-slate-300 font-light text-sm leading-relaxed font-sans-clean">
                         Centralizamos y gestionamos de forma telemática toda la documentación legal obligatoria para garantizar una firma de compraventa ágil y sin sobresaltos.
                     </p>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <section class="py-20 bg-slate-950/20 border-t border-white/5 relative overflow-hidden">
+    <!-- COMPROMISO RARA AVIS -->
+    <section class="py-24 relative overflow-hidden">
         <div class="max-w-5xl mx-auto px-6">
-            <div class="glass-card p-4 rounded-[2.5rem] overflow-hidden shadow-2xl relative bg-slate-950/60" data-aos="zoom-in">
+            <div class="glass-card-tech p-8 md:p-12 rounded-[2.5rem] overflow-hidden shadow-2xl relative" data-aos="zoom-in">
                 
                 <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
                     <div class="md:col-span-6 w-full flex justify-center">
-                        <img src="img/ana2.jpeg" alt="Ana María - Tu tranquilidad legal" class="w-full h-[350px] object-contain rounded-[2rem] hover:scale-[1.01] transition-transform duration-500">
+                        <img src="img/ana2.jpeg" alt="Ana María - Tu tranquilidad legal" class="w-full h-[360px] object-contain rounded-[1.5rem]">
                     </div>
                     
-                    <div class="md:col-span-6 p-4 text-center md:text-left">
-                        <span class="text-neon-cyan font-bold uppercase tracking-widest text-[10px] mb-2 block">Compromiso Rara Avis</span>
-                        <h3 class="text-2xl md:text-4xl font-black uppercase text-white tracking-tight leading-tight mb-4">
-                            Tu tranquilidad legal <br>es nuestra prioridad.
+                    <div class="md:col-span-6 p-2 text-center md:text-left">
+                        <span class="text-neon-cyan font-bold uppercase tracking-[0.3em] text-xs mb-3 block">Compromiso Rara Avis</span>
+                        <h3 class="text-3xl md:text-5xl font-extrabold uppercase text-white tracking-tight leading-tight mb-6 font-tech">
+                            Tu tranquilidad legal <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-neon-cyan to-cyan-brand">es nuestra prioridad.</span>
                         </h3>
-                        <p class="text-slate-200 font-light text-sm leading-relaxed">
+                        <p class="text-slate-300 font-light text-sm leading-relaxed font-sans-clean">
                             Nos encargamos de proteger tu operación de principio a fin, asegurando que cada trámite digital cumpla strictly con los mayores estándares del sector.
                         </p>
                     </div>
@@ -209,41 +263,43 @@
         </div>
     </section>
 
-    <section id="servicios" class="py-28 bg-slate-950/30 border-t border-white/5">
+    <!-- SERVICIOS AVANZADOS -->
+    <section id="servicios" class="py-32 border-t border-white/5">
         <div class="max-w-7xl mx-auto px-6">
             
-            <div class="text-center mb-20">
-                <h2 class="text-3xl md:text-5xl font-black uppercase tracking-tighter">Servicios Avanzados Incluidos</h2>
-                <div class="w-16 h-1 bg-neon-cyan mx-auto mt-4 rounded-full"></div>
+            <div class="text-center mb-24">
+                <span class="text-neon-cyan text-xs uppercase tracking-[0.3em] font-semibold mb-2 block">Garantía Técnica</span>
+                <h2 class="text-4xl md:text-6xl font-extrabold uppercase tracking-tight font-tech text-white">Servicios Avanzados Incluidos</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-sky-brand to-neon-cyan mx-auto mt-6 rounded-full"></div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
-                <div class="glass-card p-10 rounded-[2rem] hover:border-sky-400/30 transition-all duration-300 group flex flex-col justify-between" data-aos="fade-up">
+                <div class="glass-card-tech p-10 rounded-[2rem] flex flex-col justify-between" data-aos="fade-up">
                     <div>
-                        <div class="text-sky-400 text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">🔑</div>
-                        <h3 class="text-xl font-bold mb-4 uppercase tracking-wide text-white">Nota Simple Informativa</h3>
-                        <p class="text-slate-200 text-sm leading-relaxed font-light">
+                        <div class="w-14 h-14 rounded-2xl bg-cyan-brand/10 border border-cyan-brand/30 flex items-center justify-center text-neon-cyan text-2xl font-bold mb-6">01</div>
+                        <h3 class="text-2xl font-bold mb-4 uppercase tracking-wide text-white font-tech">Nota Simple Informativa</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed font-light font-sans-clean">
                             Solicitamos y verificamos la información registral de tu inmueble para garantizar su estado legal y confirmar la titularidad actual.
                         </p>
                     </div>
                 </div>
                 
-                <div class="glass-card p-10 rounded-[2rem] hover:border-neon-cyan/30 transition-all duration-300 group flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
+                <div class="glass-card-tech p-10 rounded-[2rem] flex flex-col justify-between" data-aos="fade-up" data-aos-delay="200">
                     <div>
-                        <div class="text-neon-cyan text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">⚡</div>
-                        <h3 class="text-xl font-bold mb-4 uppercase tracking-wide text-white">Certificado de Eficiencia Energética (CEE)</h3>
-                        <p class="text-slate-200 text-sm leading-relaxed font-light">
+                        <div class="w-14 h-14 rounded-2xl bg-cyan-brand/10 border border-cyan-brand/30 flex items-center justify-center text-neon-cyan text-2xl font-bold mb-6">02</div>
+                        <h3 class="text-2xl font-bold mb-4 uppercase tracking-wide text-white font-tech">Certificado de Eficiencia Energética (CEE)</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed font-light font-sans-clean">
                             Gestionamos la obtención de tu certificado energético oficial, documento obligatorio por ley para formalizar cualquier operación de compraventa.
                         </p>
                     </div>
                 </div>
                 
-                <div class="glass-card p-10 rounded-[2rem] hover:border-sky-400/30 transition-all duration-300 group flex flex-col justify-between" data-aos="fade-up" data-aos-delay="400">
+                <div class="glass-card-tech p-10 rounded-[2rem] flex flex-col justify-between" data-aos="fade-up" data-aos-delay="400">
                     <div>
-                        <div class="text-sky-400 text-4xl mb-6 group-hover:scale-110 transition-transform duration-300">🏢</div>
-                        <h3 class="text-xl font-bold mb-4 uppercase tracking-wide text-white">Informe de Evaluación del Edificio (IEE/ITE)</h3>
-                        <p class="text-slate-200 text-sm leading-relaxed font-light">
+                        <div class="w-14 h-14 rounded-2xl bg-cyan-brand/10 border border-cyan-brand/30 flex items-center justify-center text-neon-cyan text-2xl font-bold mb-6">03</div>
+                        <h3 class="text-2xl font-bold mb-4 uppercase tracking-wide text-white font-tech">Informe de Evaluación del Edificio (IEE/ITE)</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed font-light font-sans-clean">
                             Supervisamos el estado legal y técnico de la edificación mediante la ITE para asegurar que el inmueble cumple con la normativa vigente.
                         </p>
                     </div>
@@ -254,52 +310,51 @@
         </div>
     </section>
 
-    <section id="contacto" class="py-28 bg-slate-950/60 border-t border-white/5 relative overflow-hidden">
-        <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-sky-500/5 blur-[120px] rounded-full"></div>
-        
+    <!-- FORMULARIO DE CONTACTO -->
+    <section id="contacto" class="py-32 relative overflow-hidden">
         <div class="max-w-4xl mx-auto px-6 relative z-10">
-            <div class="glass-card p-10 md:p-16 rounded-[2.5rem] shadow-2xl text-center">
+            <div class="glass-card-tech p-10 md:p-16 rounded-[2.5rem] text-center border border-neon-cyan/20">
                 
-                <h2 class="text-3xl md:text-5xl font-black mb-3 uppercase tracking-tighter">¿Hablamos hoy?</h2>
-                <p class="text-slate-400 text-xs md:text-sm uppercase tracking-widest mb-12">Asesoramiento Exclusivo a un Clic</p>
+                <h2 class="text-4xl md:text-6xl font-extrabold mb-3 uppercase tracking-tight font-tech text-white">¿Hablamos hoy?</h2>
+                <p class="text-neon-cyan text-xs uppercase tracking-[0.3em] mb-14 font-semibold">Asesoramiento Exclusivo a un Clic</p>
                 
-                <form action="https://api.web3forms.com/submit" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+                <form action="https://api.web3forms.com/submit" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left font-sans-clean">
                     
                     <input type="hidden" name="access_key" value="6ee05328-7787-401b-9229-ea62fe657fd4">
 
                     <div class="flex flex-col gap-2">
-                        <label class="text-[10px] uppercase tracking-wider font-bold text-slate-200 ml-1">Tu nombre completo</label>
-                        <input type="text" name="Nombre_Completo" required placeholder="Introduce nombre y apellidos" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-neon-cyan focus:bg-white/10 outline-none text-sm text-white transition-all">
+                        <label class="text-[10px] uppercase tracking-[0.2em] font-semibold text-slate-300 ml-1">Tu nombre completo</label>
+                        <input type="text" name="Nombre_Completo" required placeholder="Introduce nombre y apellidos" class="w-full bg-slate-900/90 border border-white/10 p-4 rounded-xl focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan outline-none text-sm text-white transition-all font-light">
                     </div>
                     
                     <div class="flex flex-col gap-2">
-                        <label class="text-[10px] uppercase tracking-wider font-bold text-slate-200 ml-1">Teléfono</label>
-                        <input type="tel" name="Teléfono" required placeholder="Introduce tu número" class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-neon-cyan focus:bg-white/10 outline-none text-sm text-white transition-all">
+                        <label class="text-[10px] uppercase tracking-[0.2em] font-semibold text-slate-300 ml-1">Teléfono</label>
+                        <input type="tel" name="Teléfono" required placeholder="Introduce tu número" class="w-full bg-slate-900/90 border border-white/10 p-4 rounded-xl focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan outline-none text-sm text-white transition-all font-light">
                     </div>
 
                     <div class="flex flex-col gap-2">
-                        <label class="text-[10px] uppercase tracking-wider font-bold text-slate-200 ml-1">¿Dónde se encuentra el inmueble? (Población y zona)</label>
-                        <input type="text" name="Ubicación_Inmueble" required placeholder="Población y zona..." class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-neon-cyan focus:bg-white/10 outline-none text-sm text-white transition-all">
+                        <label class="text-[10px] uppercase tracking-[0.2em] font-semibold text-slate-300 ml-1">¿Dónde se encuentra el inmueble? (Población y zona)</label>
+                        <input type="text" name="Ubicación_Inmueble" required placeholder="Población y zona..." class="w-full bg-slate-900/90 border border-white/10 p-4 rounded-xl focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan outline-none text-sm text-white transition-all font-light">
                     </div>
 
                     <div class="flex flex-col gap-2">
-                        <label class="text-[10px] uppercase tracking-wider font-bold text-slate-200 ml-1">Tipo de inmueble</label>
-                        <input type="text" name="Tipo_Inmueble" required placeholder="Piso, Casa, Ático, Estudio..." class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-neon-cyan focus:bg-white/10 outline-none text-sm text-white transition-all">
+                        <label class="text-[10px] uppercase tracking-[0.2em] font-semibold text-slate-300 ml-1">Tipo de inmueble</label>
+                        <input type="text" name="Tipo_Inmueble" required placeholder="Piso, Casa, Ático, Estudio..." class="w-full bg-slate-900/90 border border-white/10 p-4 rounded-xl focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan outline-none text-sm text-white transition-all font-light">
                     </div>
 
                     <div class="flex flex-col gap-2 md:col-span-2">
-                        <label class="text-[10px] uppercase tracking-wider font-bold text-slate-200 ml-1">Cuéntame</label>
-                        <textarea name="Urgencia_Y_Necesidad" rows="4" placeholder="Cuéntame brevemente tu situación..." class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-neon-cyan focus:bg-white/10 outline-none text-sm text-white transition-all resize-none"></textarea>
+                        <label class="text-[10px] uppercase tracking-[0.2em] font-semibold text-slate-300 ml-1">Cuéntame</label>
+                        <textarea name="Urgencia_Y_Necesidad" rows="4" placeholder="Cuéntame brevemente tu situación..." class="w-full bg-slate-900/90 border border-white/10 p-4 rounded-xl focus:border-neon-cyan focus:ring-1 focus:ring-neon-cyan outline-none text-sm text-white transition-all resize-none font-light"></textarea>
                     </div>
 
                     <div class="md:col-span-2 flex items-start gap-3 mt-2">
-                        <input type="checkbox" id="legal-privacy" required class="w-4 h-4 mt-0.5 rounded border-white/20 bg-white/5 text-neon-cyan focus:ring-0 focus:ring-offset-0 cursor-pointer accent-cyan-400">
+                        <input type="checkbox" id="legal-privacy" required class="w-4 h-4 mt-0.5 rounded border-white/20 bg-slate-900 accent-neon-cyan cursor-pointer">
                         <label for="legal-privacy" class="text-xs text-slate-300 font-light leading-snug cursor-pointer select-none">
-                            He leído y acepto la <a href="politica-privacidad.html" target="_blank" class="text-sky-400 hover:underline">Política de Privacidad</a>. Acepto el tratamiento de mis datos exclusivamente para gestionar mi consulta inmobiliaria.
+                            He leído y acepto la <a href="politica-privacidad.html" target="_blank" class="text-neon-cyan hover:underline">Política de Privacidad</a>. Acepto el tratamiento de mis datos exclusivamente para gestionar mi consulta inmobiliaria.
                         </label>
                     </div>
                     
-                    <button type="submit" class="md:col-span-2 mt-4 bg-gradient-to-r from-sky-400 to-cyan-400 text-dark-bg py-4 rounded-xl font-black tracking-[0.25em] uppercase text-sm btn-premium shadow-lg w-full text-center">
+                    <button type="submit" class="md:col-span-2 mt-6 bg-gradient-to-r from-sky-brand to-neon-cyan text-dark-bg py-4 rounded-xl font-black tracking-[0.25em] uppercase text-xs btn-tech-glow shadow-xl w-full text-center transition-all">
                         ENVIAR SOLICITUD
                     </button>
                 </form>
@@ -308,22 +363,23 @@
         </div>
     </section>
 
-    <footer class="py-16 bg-slate-950/60 border-t border-white/5 text-center text-slate-500 font-medium tracking-wider">
+    <!-- FOOTER -->
+    <footer class="py-16 bg-slate-950 border-t border-white/5 text-center text-slate-500 font-light tracking-wider font-sans-clean">
         <div class="max-w-6xl mx-auto px-6 flex flex-col items-center gap-6">
             
-            <div class="flex flex-wrap justify-center gap-x-8 gap-y-3 text-xs uppercase tracking-[0.15em]">
-                <a href="aviso-legal.html" class="hover:text-white transition-colors duration-200">Aviso Legal</a>
-                <a href="politica-privacidad.html" class="hover:text-white transition-colors duration-200">Política de Privacidad</a>
-                <a href="politica-cookies.html" class="hover:text-white transition-colors duration-200">Política de Cookies</a>
+            <div class="flex flex-wrap justify-center gap-x-8 gap-y-3 text-xs uppercase tracking-[0.2em]">
+                <a href="aviso-legal.html" class="hover:text-neon-cyan transition-colors duration-200">Aviso Legal</a>
+                <a href="politica-privacidad.html" class="hover:text-neon-cyan transition-colors duration-200">Política de Privacidad</a>
+                <a href="politica-cookies.html" class="hover:text-neon-cyan transition-colors duration-200">Política de Cookies</a>
             </div>
 
             <div class="w-12 h-px bg-white/10"></div>
 
-            <div class="text-[10px] uppercase tracking-[0.3em] font-light">
+            <div class="text-[10px] uppercase tracking-[0.3em] font-light text-slate-400">
                 &copy; <span id="current-year"></span> Rara Avis Homes. Todos los derechos reservados.
             </div>
             
-            <p class="text-[9px] font-extralight text-slate-600 max-w-xl uppercase tracking-widest leading-relaxed">
+            <p class="text-[9px] font-light text-slate-600 max-w-xl uppercase tracking-widest leading-relaxed">
                 Este sitio web cumple rigurosamente con el Reglamento General de Protección de Datos (RGPD) y la normativa LSSI-CE de servicios digitales.
             </p>
         </div>
@@ -335,4 +391,4 @@
         document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
 </body>
-</html> 
+</html>
