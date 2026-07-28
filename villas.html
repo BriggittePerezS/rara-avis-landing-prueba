@@ -15,8 +15,8 @@
                 extend: {
                     colors: {
                         'dark-bg': '#020617',
-                        'neon-cyan': '#00ffff',
-                        'luxury-gold': '#d4af37',
+                        'neon-cyan': '#00e5ff',
+                        'sky-accent': '#38bdf8',
                     },
                     fontFamily: {
                         'brand': ['Montserrat', 'sans-serif'],
@@ -53,7 +53,6 @@
             }
         }
 
-        /* Estilo exacto de los botones */
         .btn-rara-cyan {
             background-color: #00e5ff;
             color: #020617;
@@ -93,9 +92,9 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
 
-        .gold-divider {
+        .cyan-divider {
             height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.5), transparent);
+            background: linear-gradient(90deg, transparent, rgba(0, 229, 255, 0.4), transparent);
         }
 
         .floating-whatsapp {
@@ -108,7 +107,6 @@
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
-        /* Configuración para el video local en el Hero */
         .video-background {
             position: absolute;
             top: 50%;
@@ -181,7 +179,7 @@
         <span class="absolute -top-1 -right-1 bg-red-500 text-white text-[9px] font-bold w-5 h-5 rounded-full flex items-center justify-center border-2 border-dark-bg">1</span>
     </a>
 
-    <!-- HERO FULLSCREEN CON VIDEO LOCAL (video/video-villas.mp4) -->
+    <!-- HERO FULLSCREEN CON VIDEO LOCAL -->
     <section class="relative h-screen flex items-end pb-16 pt-28 px-6 md:px-16 overflow-hidden">
         <div class="video-background z-0 pointer-events-none">
             <video autoplay muted loop playsinline class="pointer-events-none select-none">
@@ -211,52 +209,47 @@
         </div>
     </section>
 
-    <div class="gold-divider my-8"></div>
+    <div class="cyan-divider my-8"></div>
 
-    <!-- CONTENEDOR PRINCIPAL CON DISEÑO DE DOS COLUMNAS (Izquierda: Contenido y Mapa, Derecha: Formulario Fijo) -->
+    <!-- CONTENEDOR PRINCIPAL -->
     <div class="max-w-[1400px] mx-auto px-4 md:px-8 py-16 flex flex-col lg:flex-row items-start gap-12 relative">
 
-        <!-- COLUMNA IZQUIERDA: Contenido de la Villa + Mapa (Scroll normal) -->
+        <!-- COLUMNA IZQUIERDA -->
         <div class="w-full lg:w-[calc(100%-460px)] space-y-24">
             
-            <!-- INTRODUCCIÓN -->
             <section id="detalles" class="text-left pt-6" data-aos="fade-up">
-                <span class="text-slate-400 text-xs tracking-[0.3em] font-semibold uppercase block mb-4">¿Por qué Villa Kismet?</span>
+                <span class="text-sky-accent text-xs tracking-[0.3em] font-semibold uppercase block mb-4">¿Por qué Villa Kismet?</span>
                 <h2 class="text-2xl md:text-4xl font-normal uppercase tracking-[0.05em] text-white mb-6 leading-snug">
                     LA ESENCIA DEL LUJO<br>
-                    <span class="font-light text-luxury-gold">CONTEMPORÁNEO EN LA COSTA</span>
+                    <span class="font-light text-transparent bg-clip-text bg-gradient-to-r from-sky-300 via-cyan-300 to-white">CONTEMPORÁNEO EN LA COSTA</span>
                 </h2>
                 <p class="text-slate-300 text-sm md:text-base font-light leading-relaxed tracking-wide">
                     Un concepto arquitectónico refinado donde los materiales sostenibles de primera calidad y las amenidades tipo resort se unen para crear una oportunidad inmobiliaria excepcional en el enclave más privilegiado de Jávea.
                 </p>
             </section>
 
-            <!-- FICHA TÉCNICA -->
             <section class="w-full">
                 <div class="grid grid-cols-2 gap-4" data-aos="fade-up">
-                    <div class="glass-card p-5 rounded-2xl text-center">
-                        <span class="text-luxury-gold text-[10px] font-bold tracking-widest uppercase block mb-1">Dormitorios</span>
+                    <div class="glass-card p-5 rounded-2xl text-center border-white/10 hover:border-neon-cyan/40 transition-colors">
+                        <span class="text-sky-accent text-[10px] font-bold tracking-widest uppercase block mb-1">Dormitorios</span>
                         <span class="text-3xl font-normal tracking-wider text-white font-serif-title">5</span>
                     </div>
-                    <div class="glass-card p-5 rounded-2xl text-center">
-                        <span class="text-luxury-gold text-[10px] font-bold tracking-widest uppercase block mb-1">Baños</span>
+                    <div class="glass-card p-5 rounded-2xl text-center border-white/10 hover:border-neon-cyan/40 transition-colors">
+                        <span class="text-sky-accent text-[10px] font-bold tracking-widest uppercase block mb-1">Baños</span>
                         <span class="text-3xl font-normal tracking-wider text-white font-serif-title">5</span>
                     </div>
-                    <div class="glass-card p-5 rounded-2xl text-center">
-                        <span class="text-luxury-gold text-[10px] font-bold tracking-widest uppercase block mb-1">Construidos</span>
+                    <div class="glass-card p-5 rounded-2xl text-center border-white/10 hover:border-neon-cyan/40 transition-colors">
+                        <span class="text-sky-accent text-[10px] font-bold tracking-widest uppercase block mb-1">Construidos</span>
                         <span class="text-xl md:text-2xl font-normal tracking-wider text-white font-serif-title">388 m²</span>
                     </div>
-                    <div class="glass-card p-5 rounded-2xl text-center">
-                        <span class="text-luxury-gold text-[10px] font-bold tracking-widest uppercase block mb-1">Parcela</span>
+                    <div class="glass-card p-5 rounded-2xl text-center border-white/10 hover:border-neon-cyan/40 transition-colors">
+                        <span class="text-sky-accent text-[10px] font-bold tracking-widest uppercase block mb-1">Parcela</span>
                         <span class="text-xl md:text-2xl font-normal tracking-wider text-white font-serif-title">1.000 m²</span>
                     </div>
                 </div>
             </section>
 
-            <!-- BLOQUES DE IMÁGENES Y TEXTOS -->
             <div class="space-y-16">
-                
-                <!-- Bloque 1 -->
                 <div class="space-y-6" data-aos="fade-up">
                     <div class="rounded-3xl overflow-hidden glass-card h-[320px] md:h-[400px] img-zoom-container">
                         <img src="img/salon.jpeg" alt="Salón Principal" class="w-full h-full object-cover img-zoom">
@@ -271,7 +264,6 @@
                     </div>
                 </div>
 
-                <!-- Bloque 2 -->
                 <div class="space-y-6" data-aos="fade-up">
                     <div class="rounded-3xl overflow-hidden glass-card h-[320px] md:h-[400px] img-zoom-container">
                         <img src="img/piscina.jpeg" alt="Piscina Infinity" class="w-full h-full object-cover img-zoom">
@@ -286,7 +278,6 @@
                     </div>
                 </div>
 
-                <!-- Bloque 3 -->
                 <div class="space-y-6" data-aos="fade-up">
                     <div class="rounded-3xl overflow-hidden glass-card h-[320px] md:h-[400px] img-zoom-container">
                         <img src="img/dormitorio.jpeg" alt="Dormitorio Principal" class="w-full h-full object-cover img-zoom">
@@ -301,7 +292,6 @@
                     </div>
                 </div>
 
-                <!-- Bloque 4 -->
                 <div class="space-y-6" data-aos="fade-up">
                     <div class="rounded-3xl overflow-hidden glass-card h-[320px] md:h-[400px] img-zoom-container">
                         <img src="img/jardin.jpeg" alt="Jardín y Exteriores" class="w-full h-full object-cover img-zoom">
@@ -315,16 +305,15 @@
                         </p>
                     </div>
                 </div>
-
             </div>
 
             <!-- SECCIÓN MAPA DE JÁVEA -->
-            <section class="space-y-6 pt-6" data-aos="fade-up">
-                <div class="space-y-2 text-left">
-                    <span class="text-luxury-gold text-[10px] font-bold tracking-[0.3em] uppercase block">Ubicación Exclusiva</span>
-                    <h3 class="text-xl md:text-2xl font-normal uppercase text-white tracking-[0.05em]">Situada en Jávea, Alicante</h3>
+            <section class="space-y-4 pt-4" data-aos="fade-up">
+                <div class="space-y-1 text-left">
+                    <span class="text-sky-accent text-[10px] font-bold tracking-[0.3em] uppercase block">Ubicación Exclusiva</span>
+                    <h3 class="text-lg md:text-xl font-normal uppercase text-white tracking-[0.05em]">Situada en Jávea, Alicante</h3>
                 </div>
-                <div class="rounded-3xl overflow-hidden glass-card h-[350px] w-full border border-white/10 shadow-2xl relative">
+                <div class="rounded-2xl overflow-hidden glass-card h-[220px] w-full border border-white/10 shadow-xl relative">
                     <iframe 
                         width="100%" 
                         height="100%" 
@@ -342,13 +331,12 @@
         <div id="contacto-villa" class="w-full lg:w-[420px] lg:sticky lg:top-28 z-40 mt-8 lg:mt-0">
             <div class="glass-card p-6 md:p-8 rounded-[2rem] shadow-2xl relative overflow-hidden border border-white/10" data-aos="fade-left">
                 
-                <!-- Encabezado corporativo estilo referencia -->
                 <div class="text-center mb-6 pb-6 border-b border-white/10">
                     <span class="text-slate-400 text-[10px] font-semibold tracking-[0.25em] uppercase block mb-2">CONTACTE CON NOSOTROS</span>
-                    <h3 class="text-lg md:text-xl font-normal uppercase text-white tracking-[0.05em] font-serif-title mb-2">InmoVillasJávea</h3>
+                    <h3 class="text-lg md:text-xl font-normal uppercase text-white tracking-[0.05em] font-serif-title mb-2">Rara Avis Homes</h3>
                     <div class="flex flex-col items-center gap-1 mt-2">
-                        <a href="tel:+34966460033" class="text-luxury-gold text-xs font-bold tracking-wider hover:underline">+34 966 46 00 33</a>
-                        <a href="mailto:info@inmovillasjavea.com" class="text-slate-300 text-xs hover:text-neon-cyan transition-colors">info@inmovillasjavea.com</a>
+                        <a href="tel:+34966460033" class="text-sky-accent text-xs font-bold tracking-wider hover:underline">+34 966 46 00 33</a>
+                        <a href="mailto:info@raraavishomes.com" class="text-slate-300 text-xs hover:text-neon-cyan transition-colors">info@raraavishomes.com</a>
                     </div>
                 </div>
 
@@ -358,22 +346,18 @@
 
                     <div class="flex flex-col gap-1.5">
                         <label class="text-[9px] uppercase tracking-wider font-bold text-slate-300">Nombre completo</label>
-                        <input type="text" name="Nombre" required placeholder="Tu nombre..." class="w-full bg-white/5 border border-white/10 p-3 rounded-xl focus:border-luxury-gold outline-none text-xs text-white">
+                        <input type="text" name="Nombre" required placeholder="Tu nombre..." class="w-full bg-white/5 border border-white/10 p-3 rounded-xl focus:border-neon-cyan outline-none text-xs text-white transition-colors">
                     </div>
 
                     <div class="flex flex-col gap-1.5">
                         <label class="text-[9px] uppercase tracking-wider font-bold text-slate-300">Email</label>
-                        <input type="email" name="Email" required placeholder="Tu correo electrónico..." class="w-full bg-white/5 border border-white/10 p-3 rounded-xl focus:border-luxury-gold outline-none text-xs text-white">
+                        <input type="email" name="Email" required placeholder="Tu correo electrónico..." class="w-full bg-white/5 border border-white/10 p-3 rounded-xl focus:border-neon-cyan outline-none text-xs text-white transition-colors">
                     </div>
 
                     <div class="flex flex-col gap-1.5">
                         <label class="text-[9px] uppercase tracking-wider font-bold text-slate-300">Teléfono</label>
-                        <input type="tel" name="Teléfono" required placeholder="Tu teléfono..." class="w-full bg-white/5 border border-white/10 p-3 rounded-xl focus:border-luxury-gold outline-none text-xs text-white">
+                        <input type="tel" name="Teléfono" required placeholder="Tu teléfono..." class="w-full bg-white/5 border border-white/10 p-3 rounded-xl focus:border-neon-cyan outline-none text-xs text-white transition-colors">
                     </div>
-
-                    <p class="text-[11px] text-slate-400 font-light leading-relaxed pt-1">
-                        Por favor, enviadme más información sobre la ref JV837, Villa en Jávea o propiedades similares.
-                    </p>
 
                     <button type="submit" class="w-full btn-rara-cyan py-4 rounded-full font-bold tracking-[0.15em] uppercase text-xs shadow-lg mt-2">
                         ENVIAR MENSAJE
@@ -384,12 +368,12 @@
 
     </div>
 
-    <div class="gold-divider my-8"></div>
+    <div class="cyan-divider my-8"></div>
 
     <!-- FOOTER -->
     <footer class="py-12 border-t border-white/5 text-center text-slate-500 text-xs">
         <div class="max-w-6xl mx-auto px-6 flex flex-col items-center gap-4">
-            <a href="index.html" class="text-luxury-gold hover:underline uppercase tracking-widest text-xs font-bold">
+            <a href="index.html" class="text-sky-accent hover:underline uppercase tracking-widest text-xs font-bold">
                 ← Volver a Rara Avis Homes
             </a>
             <p class="text-[10px] tracking-widest text-slate-600 uppercase font-semibold">
